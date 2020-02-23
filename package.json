@@ -7,11 +7,10 @@
     "start": "node app.js",
     "server": "nodemon app.js",
     "server:debug": "nodemon --inspect app.js"
-
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phongngo91/fortune-app.git"
+    "url": "git+https://github.com/aracpyon/fortune-app.git"
   },
   "keywords": [
     "fortune"
@@ -19,9 +18,9 @@
   "author": "Ara, Phong, Jay, Melody",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/phongngo91/fortune-app/issues"
+    "url": "https://github.com/aracpyon/fortune-app/issues"
   },
-  "homepage": "https://github.com/phongngo91/fortune-app#readme",
+  "homepage": "https://github.com/aracpyon/fortune-app#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
