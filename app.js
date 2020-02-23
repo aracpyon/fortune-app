@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.get("/", (req, res) => {
   // debugger;
   const user = new User({
-    handle: "jim",
+    username: "jim",
     email: "jim@jim.jim",
     password: "jimsgreat123"
   })

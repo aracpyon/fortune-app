@@ -13,11 +13,30 @@ const UserSchema = new Schema({
     required: true
   },
   password: {
-    tpye: String,
+    type: String,
+    required: true
+  },
+  birth_date: {
+    type: Date,
+    required: true
+  },
+  zodiac: {
+    type: String
+  },
+  kids: {
+    type: Number,
+    required: true
+  },
+  marraige: {
+    type: Number,
+    required: true
+  },
+  personality: {
+    type: Number,
     required: true
   },
   date: {
-    type: Date, 
+    type: Date,
     default: Date.now
   }
 });
@@ -25,7 +44,7 @@ const UserSchema = new Schema({
 //now, define what this User schema means inside our app
 //create model 'mongoose.model(string(what we want our model to be  called), model's schema)
 
-const User = mongoose.model('users', USerSchema);
+const User = mongoose.model('users', UserSchema);
 // users blah blah
 
-module.exports = User = mongoose.model('User', UserSchema);
+module.exports = User;

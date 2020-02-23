@@ -3,11 +3,11 @@ const router = express.Router();
 const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
-const jwt = require('jasonwebtoken');
+const jwt = require('jsonwebtoken');
 
 
-const validateRegisterInput = require("../..validation/register");
-const validateLoginInput = require("../..validation/login");
+const validateRegisterInput = require("../../validation/register");
+const validateLoginInput = require("../../validation/login");
 
 router.get('/test', (req, res) => {
   res.json({ msg: "This is the user route" });
@@ -29,7 +29,7 @@ router.post('/register', (req, res) => {
       return res.status(400).json({email: "A user is already registered with that email"})
     }else{
       const newUser = new User({
-        handle: req.body.handle,
+        username: req.body.username,
         email: req.body.email,
         password: req.body.password
       })
@@ -75,7 +75,7 @@ router.post('./login', (req, res) => {
           // res.send({ msg: "Success"})
           const payload = {
             id: user.id,
-            handle: user.handle,
+            username: user.username,
             email: user.email
           }
           jwt.sign(
@@ -90,7 +90,7 @@ router.post('./login', (req, res) => {
             }
           )
         }else{
-          return res.status(400).json({password: "Incorrect"});
+          return res.status(400).json({password: "Invalid credentials"});
         }
       })
     })

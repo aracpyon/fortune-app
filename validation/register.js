@@ -5,21 +5,21 @@ const Validator = require("Validator");
 const validText = require("./valid-text");
 
 
-module.exports = function validateRegisterInput(){
+module.exports = function validateRegisterInput(data){
   let errors = {};
 
-  data.handle = validText(data.handle) ? data.handle : "";
+  data.username = validText(data.username) ? data.username : "";
   data.email = validText(data.email) ? data.email : "";
   data.password = validText(data.password) ? data.password : "";
   data.pssword2 = validText(data.password2) ? data.password2 : "";
 
-  if (!Validator.isLength(data.handle, { min: 2, max: 30 })){
-    errors.handle = "handle must be between 2 and 30 charactros";
+  if (!Validator.isLength(data.username, { min: 2, max: 30 })){
+    errors.username = "username must be between 2 and 30 charactros";
 
   }
 
-  if (Validator.isEmpty(data.handle)){
-    errors.handle = "Handle field is required";
+  if (Validator.isEmpty(data.username)){
+    errors.username = "username field is required";
   }
 
   if (Validator.isEmpty(data.email)){
