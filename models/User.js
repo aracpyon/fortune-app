@@ -23,8 +23,20 @@ const UserSchema = new Schema({
   zodiac: {
     type: String
   },
+  kids: {
+    type: Number,
+    required: true
+  },
+  marraige: {
+    type: Number,
+    required: true
+  },
+  personality: {
+    type: Number,
+    required: true
+  },
   date: {
-    type: Date, 
+    type: Date,
     default: Date.now
   }
 });
