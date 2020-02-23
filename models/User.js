@@ -26,6 +26,6 @@ const UserSchema = new Schema({
 //create model 'mongoose.model(string(what we want our model to be  called), model's schema)
 
 const User = mongoose.model('users', USerSchema);
-
+// users blah blah
 
 module.exports = User = mongoose.model('User', UserSchema);
