@@ -5,7 +5,6 @@ const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require('jsonwebtoken');
 
-
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
@@ -15,6 +14,7 @@ router.get('/test', (req, res) => {
 
 
 router.post('/register', (req, res) => {
+  // debugger
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if (!isValid) {
@@ -27,11 +27,16 @@ router.post('/register', (req, res) => {
       //if user already exists in our database
       //we return errors to let them know
       return res.status(400).json({email: "A user is already registered with that email"})
-    }else{
+    } else {
       const newUser = new User({
         username: req.body.username,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        birthDate: req.body.birthDate,
+        zodiac: req.body.zodiac,
+        kids: req.body.kids,
+        marriage: req.body.marriage,
+        personality: req.body.personality
       })
 
       //this is just testing take below out
