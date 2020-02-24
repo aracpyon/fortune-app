@@ -2,7 +2,7 @@
 
 //Validator is from pacakge 'validator'
 const Validator = require("validator");
-const validText = require("./valid-text");
+const validText = require("./validations");
 
 //function that takes in data object(email and password) and check their validations
 

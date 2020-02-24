@@ -2,7 +2,7 @@
 
 const Validator = require("Validator");
 //Validator is a library
-const validText = require("./valid-text");
+const validText = require("./validations");
 
 
 module.exports = function validateRegisterInput(data){
@@ -11,7 +11,8 @@ module.exports = function validateRegisterInput(data){
   data.username = validText(data.username) ? data.username : "";
   data.email = validText(data.email) ? data.email : "";
   data.password = validText(data.password) ? data.password : "";
-  data.pssword2 = validText(data.password2) ? data.password2 : "";
+  data.password2 = validText(data.password2) ? data.password2 : "";
+  // data.birthDate = 
 
   if (!Validator.isLength(data.username, { min: 2, max: 30 })){
     errors.username = "username must be between 2 and 30 charactros";
