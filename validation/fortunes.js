@@ -1,11 +1,11 @@
 const Validator = require('validator');
-const validText = require('./valid-text');
+const validText = require('./validations');
 
 module.exports = function validateFortuneInput(data){
   let errors = {};
 
   data.sentence = validText(data.sentence) ? data.sentence : '';
-  data.favorbility = validText(data.favorbility) ? data.favorbility : '';
+  data.favorability = validText(data.favorability) ? data.favorability : '';
 
   if (!Validator.isLength(data.sentence, { min: 10 })) {
     errors.sentence = 'Fortune must be more than 10 characters';
@@ -15,8 +15,8 @@ module.exports = function validateFortuneInput(data){
     errors.sentence = 'fortune field is required';
   }
 
-  if (Validator.isEmpty(data.favorbility)){
-    errors.favorbility = 'Favorbility is required';
+  if (Validator.isEmpty(data.favorability)){
+    errors.favorability = 'Favorability is required';
   }
 
   return {
