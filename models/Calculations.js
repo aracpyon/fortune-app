@@ -15,3 +15,5 @@ const calculationSchema = new Schema({
         ref: 'fortunes'
     }
 });
+
+module.exports = Calculation = mongoose.model('calculation', CalculationSchema);
