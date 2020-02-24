@@ -27,7 +27,7 @@ const UserSchema = new Schema({
     type: Number,
     required: true
   },
-  marraige: {
+  marriage: {
     type: Number,
     required: true
   },
