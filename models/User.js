@@ -20,21 +20,21 @@ const UserSchema = new Schema({
     type: Date,
     required: true
   },
-  zodiac: {
-    type: String
-  },
-  kids: {
-    type: Number,
-    required: true
-  },
-  marriage: {
-    type: Number,
-    required: true
-  },
-  personality: {
-    type: Number,
-    required: true
-  },
+  // zodiac: {
+  //   type: String
+  // },
+  // kids: {
+  //   type: Number,
+  //   required: true
+  // },
+  // marriage: {
+  //   type: Number,
+  //   required: true
+  // },
+  // personality: {
+  //   type: Number,
+  //   required: true
+  // },
   date: {
     type: Date,
     default: Date.now
