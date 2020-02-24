@@ -16,5 +16,5 @@ module.exports = passport => {
     done();
     //similar to next from middleware to move on to the next middleware
     //we are using done here for password not to hang around there
-  }))
-}
+  }));
+};

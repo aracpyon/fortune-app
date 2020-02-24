@@ -2,16 +2,18 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const FortuneSchema = new Schema({
-  favorbility: {
+  favorability: {
     type: String,
     required: true
   },
   sentence: {
     type: String,
     required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
-})
+});
 
-const Fortune = mongoose.model('fortunes', FortuneSchema);
-
-module.exports = Fortune;
+module.exports = Fortune = mongoose.model('fortune', FortuneSchema);
