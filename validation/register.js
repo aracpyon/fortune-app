@@ -1,23 +1,15 @@
 const Validator = require("Validator");
 // ^ Validator is a library ^
 const validText = require("./validations");
-const validDate = require("./validations");
-const validNumber = require("./validations");
-
 
 module.exports = function validateRegisterInput(data){
   let errors = {};
-
+  
   data.username = validText(data.username) ? data.username : "";
   data.email = validText(data.email) ? data.email : "";
   data.password = validText(data.password) ? data.password : "";
   data.password2 = validText(data.password2) ? data.password2 : "";
-  data.birthDate = validDate(data.birthDate) ? data.birthDate : "";
-  data.zodiac = validText(data.zodiac) ? data.zodiac : "";
-  data.kids = validNumber(data.kids) ? data.kids : "";
-  data.marriage = validNumber(data.marriage) ? data.marriage : "";
-  data.personality = validNumber(data.personality) ? data.personality : "";
-
+  
   if (!Validator.isLength(data.username, { min: 5, max: 25 })) {
     errors.username = "Username must be between 5 and 25 characters";
   }
