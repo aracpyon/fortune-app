@@ -1,1 +1,2 @@
-initial commit
+# Fortune App
+
