@@ -5,7 +5,7 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 
 const Fortune = require("../../models/Fortune");
-const validateFortuneInput = require("../../validation/fortune");
+const validateFortuneInput = require("../../validation/fortunes");
 
 router.get("/", (req, res) => {
   Fortune.find()
