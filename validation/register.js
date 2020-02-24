@@ -15,7 +15,7 @@ module.exports = function validateRegisterInput(data){
   data.birthDate = validDate(data.birthDate) ? data.birthDate : "";
   data.zodiac = validText(data.zodiac) ? data.zodiac : "";
   data.kids = validNumber(data.kids) ? data.kids : "";
-  data.marraige = validNumber(data.marraige) ? data.marraige : "";
+  data.marriage = validNumber(data.marriage) ? data.marriage : "";
   data.personality = validNumber(data.personality) ? data.personality : "";
 
   if (!Validator.isLength(data.username, { min: 5, max: 25 })) {
