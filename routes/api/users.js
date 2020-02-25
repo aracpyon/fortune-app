@@ -5,7 +5,6 @@ const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require('jsonwebtoken');
 
-
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
@@ -13,8 +12,29 @@ router.get('/test', (req, res) => {
   res.json({ msg: "This is the user route" });
 });
 
+router.get('/', (req, res) => {
+  User.find()
+    .then(docs => {
+      return res.json(docs);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+})
+
+router.get('/:id', (req, res) => {
+  // debugger
+  User.findOne({ _id: req.params.id})
+    .then(user => {
+      return res.json(user);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+});
 
 router.post('/register', (req, res) => {
+  // debugger
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if (!isValid) {
@@ -24,21 +44,19 @@ router.post('/register', (req, res) => {
   User.findOne({ email: req.body.email })
   .then(user => {
     if (user){
-      //if user already exists in our database
-      //we return errors to let them know
       return res.status(400).json({email: "A user is already registered with that email"})
-    }else{
+    } else {
       const newUser = new User({
         username: req.body.username,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        birthDate: req.body.birthDate,
+        zodiac: req.body.zodiac,
+        kids: req.body.kids,
+        marriage: req.body.marriage,
+        personality: req.body.personality
       })
 
-      //this is just testing take below out
-      // newUser.save().then(user => res.send(user)).catch(err => res.send(err)); 
-
-      //use bcrypt to genereate our salt
-      //bcrypt.genSalt(10(number of times to generate salt, callbackfunction(err, salt) ))
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
@@ -53,8 +71,8 @@ router.post('/register', (req, res) => {
   })
 })
 
-router.post('./login', (req, res) => {
-  const { errors, isValid } = validLoginInput(req.body);
+router.post('/login', (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body);
 
   if (!isValid){
     return res.status(400).json(errors);
@@ -72,7 +90,6 @@ router.post('./login', (req, res) => {
       bcrypt.compare(password, user.password)
       .then(isMatch => {
         if(isMatch){
-          // res.send({ msg: "Success"})
           const payload = {
             id: user.id,
             username: user.username,
@@ -89,11 +106,13 @@ router.post('./login', (req, res) => {
               });
             }
           )
-        }else{
+        } else {
           return res.status(400).json({password: "Invalid credentials"});
         }
       })
     })
 })
+
+
 
 module.exports = router;
