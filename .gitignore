@@ -1,3 +1,4 @@
 /config/keys.js
 /node_modules
-frontend/package-lock.json
+package-lock.json
+/frontend/package-lock.json
