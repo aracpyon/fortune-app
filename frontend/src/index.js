@@ -5,7 +5,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import { setSessionToken } from './util/session_api_util';
 import jwt_decode from 'jwt-decode';
-import { logout } from './actions/session_action';
+import { logout } from './actions/session_actions';
 
 // testing
 import axios from 'axios';

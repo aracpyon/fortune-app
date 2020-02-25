@@ -2,9 +2,9 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 
 const App = () => (
-  <Switch>
+  // <Switch>
     <h1>Hey</h1>
-  </Switch>
+  // {/* </Switch> */}
 );
 
 export default App;

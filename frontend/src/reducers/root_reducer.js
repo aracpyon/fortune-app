@@ -1,6 +1,11 @@
 import { combineReducers } from 'redux';
-import fortuneReducer from './fortune_reducer';
+import entitiesReducer from './entities_reducer';
+import errorsReducer from './errors_reducer';
+import sessionReducer from './session_reducer';
+
 
 export default combineReducers({
-  fortunes: fortuneReducer
+  entities: entitiesReducer,
+  session: sessionReducer,
+  errors: errorsReducer
 });
