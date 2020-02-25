@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import * as SessionAPIUtils from '../util/session_api_util';
+import * as SessionAPIUtils from './util/session_api_util';
 import Root from './components/root';
 import configureStore from './store/store';
 import axios from 'axios';
