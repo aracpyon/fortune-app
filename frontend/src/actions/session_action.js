@@ -48,7 +48,7 @@ export const login = user => dispatch => {
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);
         SessionAPIUtils.setSessionToken(token);
-        const decoded = jwt_decoded(token);
+        const decoded = jwt_decode(token);
         dispatch(receiveCurrentUser(decoded));
     })
     .catch(
@@ -58,6 +58,6 @@ export const login = user => dispatch => {
 
 export const logout = () => dispatch => {
     localStorage.removeItem('jwtToken');
-    SessionAPIUtils.setSessionToken(false);
+    SessionAPIUtils.setSessionToken(null);
     dispatch(logoutCurrentUser());
 }
