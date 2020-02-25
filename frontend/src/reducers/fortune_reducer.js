@@ -1,12 +1,12 @@
 import { RECEIVE_FORTUNES, RECEIVE_USER_FORTUNES, RECEIVE_FORTUNE } from '../actions/fortune_actions';
 
-const FortuneReducers = (state = { all: {}, user: {} }, action) => {
+const FortuneReducer = (state = { all: {}, user: {} }, action) => {
   Object.freeze(state);
 
   let newState = Object.assign({}, state);
   switch(action.type){
     case RECEIVE_FORTUNES:
-      debugger
+      // debugger
       let AllFortunes = {};
       action.fortunes.data.forEach(fortune => {
         AllFortunes[fortune._id] = fortune
@@ -26,4 +26,4 @@ const FortuneReducers = (state = { all: {}, user: {} }, action) => {
   }
 }
 
-export default FortuneReducers;
+export default FortuneReducer;
