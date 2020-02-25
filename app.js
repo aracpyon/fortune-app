@@ -6,6 +6,7 @@ const users = require("./routes/api/users");
 const User = require('./models/User');
 const bodyParser = require('body-parser');
 const fortunes = require('./routes/api/fortunes');
+const calculations = require('./routes/api/calculations');
 //tells app  what source of request respond to
 
 
