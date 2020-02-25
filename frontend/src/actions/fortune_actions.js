@@ -20,14 +20,14 @@ export const receiveUserFortunes = fortunes => ({
 });
 
 export const fetchFortunes = () => dispatch => {
-  debugger
+  // debugger
   return APIUtil.getFortunes()
     .then(fortunes => dispatch(receiveFortunes(fortunes)))
     .catch(err => console.log(err))
 }
 
 export const fetchFortune = fortuneId => dispatch => {
-  debugger
+  // debugger
   return APIUtil.getFortune(fortuneId)
     .then(fortune => dispatch(receiveFortune(fortune)))
     .catch(err => console.log(err))
