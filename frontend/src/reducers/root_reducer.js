@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import fortunesReducer from './fortunes_reducer';
+import fortuneReducer from './fortune_reducer';
 
 export default combineReducers({
-  fortunes: fortunesReducer
+  fortunes: fortuneReducer
 });
