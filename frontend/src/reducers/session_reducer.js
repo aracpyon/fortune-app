@@ -7,7 +7,7 @@ import {
 const nullState = {
     isAuthenticated: false,
     user: {}
-}
+};
 
 const sessionReducer = (state = nullState, action) => {
   // debugger
@@ -26,9 +26,9 @@ const sessionReducer = (state = nullState, action) => {
       }
     case LOGOUT_CURRENT_USER:
         return {
-          isAuthenticated: null,
+          isAuthenticated: false,
           user: undefined
-        }
+        };
     default:
       return state;
   }

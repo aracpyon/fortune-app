@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isAuthenticated: true,
             user: decoded
         }
-    }
+    };
     store = configureStore(preloadedState);
 
     const currentTime = Date.now() /1000;

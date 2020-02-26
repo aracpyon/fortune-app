@@ -5,14 +5,14 @@ import { login, clearErrors } from '../../actions/session_actions';
 const mSTP = (state, ownProps) => {
     return {
         errors: state.errors.session
-    }
-}
+    };
+};
 
 const mDTP = dispatch => {
     return {
         login: user => dispatch(login(user)),
         clearErrors: () => dispatch(clearErrors())
-    }
-}
+    };
+};
 
 export default connect(mSTP, mDTP)(LoginForm);
