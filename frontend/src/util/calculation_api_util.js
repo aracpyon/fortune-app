@@ -1,6 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
+<<<<<<< HEAD
 export const getCalculations = () => {
   return axios.get('api/calculations')
 };
@@ -13,6 +14,11 @@ export const getCalculations = () => {
 export const fetchTwoRandomUsers = () =>{
   return axios.get('api/users/twousers');
 }
+=======
+export const fetchTwoRandomUsers = () =>{
+  return axios.get('api/users/twousers');
+};
+>>>>>>> master
 
 // We have to do this because Node.js backend is only accepting
 // data using the urlencoded format

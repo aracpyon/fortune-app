@@ -42,9 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.fetchFortunes = fetchFortunes;
   window.fetchFortune = fetchFortune;
+<<<<<<< HEAD
 
   window.fetchCalculations = fetchCalculations;
   window.createCalculation = postCalculation;
+=======
+>>>>>>> master
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // testing 
