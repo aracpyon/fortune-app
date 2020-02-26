@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './splash.css';
@@ -8,7 +9,7 @@ class SplashPage extends React.Component {
             <div className="main-splash-container">
               
                 <div className="center-image-section"> 
-                    <img className="fortune-cookie-img" src="/fortune-cookie-chinese.jpg" alt="fortune-cookie" />
+                    <img className="fortune-cookie-img" src="/fortune_couple.png" alt="fortune-cookie" />
                 </div>
                 <NavLink className="Signup-link" to="/signup">Sign Up</NavLink>
                 <NavLink className="Login-link" to="/login">Log In</NavLink>
