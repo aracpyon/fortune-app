@@ -12,9 +12,9 @@ import PlayPage from './fortune/play_page';
 const App = () => (
   <div className="main-app-container">
     <Switch>
-      <AuthRoute exact path="/" component={SplashPage} />
-      <AuthRoute path="/login" component={LoginFormContainer}/>
-      <AuthRoute path="/signup" component={RegistrationFormContainer}/>
+      <Route exact path="/" component={SplashPage} />
+      <Route path="/login" component={LoginFormContainer}/>
+      <Route path="/signup" component={RegistrationFormContainer}/>
       <Route exact path="/randomcalc" component={RandomCalcContainer} />
       <Route path="/play" component={PlayPage} />
     </Switch>

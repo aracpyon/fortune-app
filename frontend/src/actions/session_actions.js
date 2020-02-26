@@ -41,7 +41,13 @@ export const clearErrors = () => {
 
 export const register = user => dispatch => {
   return SessionAPIUtils.register(user).then(
-    user => dispatch(receiveUserLogin(user)),
+    (res) => {
+      const { token } = res.data;
+      localStorage.setItem("jwtToken", token);
+      SessionAPIUtils.setSessionToken(token);
+      const decoded = jwt_decode(token);
+      dispatch(receiveCurrentUser(decoded));
+    },
     errors => dispatch(receiveSessionErrors(errors.response.data))
   );
 };

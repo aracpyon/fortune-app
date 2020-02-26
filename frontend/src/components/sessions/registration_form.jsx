@@ -211,6 +211,7 @@ class RegistrationForm extends React.Component {
             <button className="signup-button">sign up</button>
           </div>
         </form>
+        <button onClick={() => this.props.logout()}>LOGOUT</button>
       </div>
     );
   }
