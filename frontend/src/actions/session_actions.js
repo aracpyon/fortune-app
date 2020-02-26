@@ -60,6 +60,6 @@ export const login = user => dispatch => {
 
 export const logout = () => dispatch => {
   localStorage.removeItem("jwtToken");
-  SessionAPIUtils.setSessionToken(null);
+  SessionAPIUtils.setSessionToken(false);
   dispatch(logoutCurrentUser());
 };

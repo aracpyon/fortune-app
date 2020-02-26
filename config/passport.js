@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const keys = require('./keys');
 
+// has to be a let, if its a const, we cannot change it to get our header bearer token, or set our secret key
 let options = {};
+//There was a typo so we did not properly set our jwtFromRequest, I think it said jwFromRequest
 options.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 options.secretOrKey = keys.secretOrKey;
 

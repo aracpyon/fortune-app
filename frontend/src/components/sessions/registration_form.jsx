@@ -26,7 +26,7 @@ class RegistrationForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.register(this.state).then(() => {
-      this.props.history.push('/randomcalc');
+      this.props.history.push('/login');
     });
   }
 
