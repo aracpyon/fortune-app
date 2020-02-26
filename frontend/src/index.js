@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.fetchFortunes = fetchFortunes;
   window.fetchFortune = fetchFortune;
-  window.getStore = store.getState;
+  window.getState = store.getState;
   window.dispatch = store.dispatch;
   // testing 
   ReactDOM.render(<Root store={store}/>, root);
 
-})
+});
 
 window.axios = axios;
 
