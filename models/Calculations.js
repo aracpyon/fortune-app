@@ -10,9 +10,13 @@ const CalculationSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'users'
     },
-    fortune_ID: {
+    fortune_id: {
         type: Schema.Types.ObjectId,
         ref: 'fortunes'
+    },
+    percentage: {
+        type: Number,
+        required: true
     }
 });
 

@@ -9,7 +9,8 @@
     "server:debug": "nodemon --inspect app.js",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "dev:debug": "concurrently \"npm run server:debug\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "mongoose": "^5.9.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "qs": "^6.9.1",
     "react-dom": "^16.12.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
