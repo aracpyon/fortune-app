@@ -1,17 +1,18 @@
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './splash.css';
 
 class SplashPage extends React.Component {
     render() {
         return (
-            <div>
+            <div className="main-splash-container">
               
                 <div className="center-image-section"> 
-                    <img className="fortune-cookie-img" src="/fortune-cookie-chinese.jpg" alt="fortune-cookie" />
+                    <img className="fortune-cookie-img" src="/fortune_couple.png" alt="fortune-cookie" />
                 </div>
-                <p><Link classname="Signup-link" to="/">Sign Up</Link>
-                <Link classname="Login-link" to="/">Log In</Link></p>
+                <NavLink className="Signup-link" to="/signup">Sign Up</NavLink>
+                <NavLink className="Login-link" to="/login">Log In</NavLink>
             </div>
         )
     }

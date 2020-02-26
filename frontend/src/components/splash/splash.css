@@ -1,22 +1,44 @@
 .fortune-cookie-img {
-    height: 50px;
-    width: 50px;
+    
     z-index: -1;
-    position: relative;
+    position: absolute;
     
-}
-
-p>.Signup-link{
+  }
+  
+  .Signup-link{
     position: relative;
-    width: 400px;
-    height: 200px;
-    border: 3px solid #73AD21;
-    
-
-}
-
-body {
+    display: block;
+    align-items: center;
+    text-anchor: middle;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    margin: 0;
+    background-color: plum;
+    border: 3px solid plum;
+    border-radius: 40px;
+    width: 150px;
+    margin: 0 auto;
+    top: 470px;
+  }
+  
+  .Login-link{
+    position: relative;
+    display: block;
+    align-items: center;
+    text-anchor: middle;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    margin: 0;
+    background-color: plum;
+    border: 3px solid plum;
+    border-radius: 40px;
+    width: 150px;
+    margin: 0 auto;
+    top: 500px;
+  }
+  
+  body {
     background-image: url("/purple-background.png");
-}
-
-
+  }
