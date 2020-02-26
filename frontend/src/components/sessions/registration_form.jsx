@@ -25,8 +25,9 @@ class RegistrationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
-    this.props.register(this.state);
+    this.props.register(this.state).then(() => {
+      this.props.history.push('/randomcalc');
+    });
   }
 
   renderErrors() {
@@ -48,12 +49,12 @@ class RegistrationForm extends React.Component {
       });
   }
 
-  updateSelect(field){
-    return e =>{
+  updateSelect(field) {
+    return e => {
       return this.setState({
         [field]: e.currentTarget.selectedOptions[0].value
-      })
-    }
+      });
+    };
   }
 
   render() {
@@ -92,10 +93,17 @@ class RegistrationForm extends React.Component {
             placeholder="Confirm Password"
           />
           <br />
-          <input type="date" className="input-field" onChange={this.update('birthDate')}/>
+          <input
+            type="date"
+            className="input-field"
+            onChange={this.update("birthDate")}
+          />
           <br />
           <div className="">
-            <select className="input-field" onChange={this.updateSelect('kids')}>
+            <select
+              className="input-field"
+              onChange={this.updateSelect("kids")}
+            >
               <option value="">Do you want kids?</option>
               <option value="1">Yes</option>
               <option value="0">No</option>
@@ -103,7 +111,10 @@ class RegistrationForm extends React.Component {
           </div>
           <br />
           <div className="">
-            <select className="input-field" onChange={this.updateSelect('marriage')}>
+            <select
+              className="input-field"
+              onChange={this.updateSelect("marriage")}
+            >
               <option value="">Do you want to get married?</option>
               <option value="1">Yes</option>
               <option value="0">No</option>
@@ -111,7 +122,10 @@ class RegistrationForm extends React.Component {
           </div>
           <br />
           <div className="">
-            <select className="input-field" onChange={this.updateSelect('personality')}>
+            <select
+              className="input-field"
+              onChange={this.updateSelect("personality")}
+            >
               <option value="">Where is your ideal place to be?</option>
               <option value="1">Indoors</option>
               <option value="0">Outdoors</option>
