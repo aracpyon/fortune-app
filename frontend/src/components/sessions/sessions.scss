@@ -84,12 +84,15 @@ div p {
     height: 40px;
     border: none;
     border-radius: unset;
-    // color: purple;
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: .03em;
     text-align: center;
+}
+
+.input-field:focus {
+    outline: none;
 }
 
 div select {
@@ -117,6 +120,7 @@ div select {
     margin-bottom: 100px;
     padding: 16px 48px 16px;
     cursor: pointer;
+    outline: none;
 }
 
 .fortune-style {

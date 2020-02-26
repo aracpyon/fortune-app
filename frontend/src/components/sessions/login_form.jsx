@@ -76,7 +76,7 @@ class LoginForm extends React.Component {
           </div>
           <input
             className="input-field"
-            type="text"
+            type="password"
             value={this.state.password}
             onChange={this.update("password")}
             placeholder="Password"
@@ -93,7 +93,7 @@ class LoginForm extends React.Component {
       </div>
     );
   }
-  
+
 }
 
 export default LoginForm;
