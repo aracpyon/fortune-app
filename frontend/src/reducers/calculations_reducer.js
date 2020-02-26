@@ -1,4 +1,4 @@
-import { RECEIVE_TWO_RANDOM_USERS } from '../actions/calculation_actions';
+import { RECEIVE_TWO_RANDOM_USERS, RECEIVE_SINGLE_CALCULATION } from '../actions/calculation_actions';
 
 const initialState = {
   randomUsers: {
@@ -17,7 +17,9 @@ const CalculationReducer = (state = initialState, action) => {
       action.twoRandomUsers.data.forEach((user) =>{
         twoUsers[user._id] = user;
       });
-      return Object.assign({}, state.randomUsers, {randomUsers: twoUsers}); 
+      return Object.assign({}, state, {randomUsers: twoUsers}); 
+    case RECEIVE_SINGLE_CALCULATION:
+      return Object.assign({}, state, {calculations: action.calculation.data});
     default:
       return state;
   }
