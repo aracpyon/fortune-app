@@ -15,7 +15,6 @@ h1{
   color: white;
   font-weight: 50;
   font-size: 70px;
-  position: absolute;
   text-align: center;
   width: 100%;
   text-anchor: middle;
@@ -23,7 +22,7 @@ h1{
 }
 
 .Signup-link{
-  position: relative;
+  /* position: relative; */
   display: block;
   align-items: center;
   text-anchor: middle;
@@ -42,6 +41,7 @@ h1{
   transition: all .4s ease;
   outline: none;
   border: none;
+  margin-bottom: 20px;
 }
 
 .Signup-link:hover{
@@ -49,7 +49,7 @@ h1{
   background-color: orchid;
 }
 .Login-link{
-  position: relative;
+  /* position: relative; */
   display: block;
   align-items: center;
   text-anchor: middle;
