@@ -4,6 +4,7 @@ const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require("jsonwebtoken");
+const passport = require('passport');
 
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
@@ -12,6 +13,14 @@ const validateLoginInput = require("../../validation/login");
 router.get("/twousers", (req, res) => {
   User.aggregate([{ $sample: { size: 2 } }]).then(users => {
     res.json(users);
+  });
+});
+
+router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+  res.json({
+    id: req.user.id,
+    username: req.user.username,
+    email: req.user.email
   });
 });
 
@@ -76,11 +85,14 @@ router.post("/register", (req, res) => {
             .catch(err => console.log(err));
         });
       });
+
+
     }
   });
 });
 
 router.post("/login", (req, res) => {
+
   const { errors, isValid } = validateLoginInput(req.body);
 
   if (!isValid) {
@@ -110,7 +122,7 @@ router.post("/login", (req, res) => {
           (err, token) => {
             res.json({
               success: true,
-              token: "Bearer" + token
+              token: "Bearer " + token
             });
           }
         );
@@ -120,5 +132,6 @@ router.post("/login", (req, res) => {
     });
   });
 });
+
 
 module.exports = router;

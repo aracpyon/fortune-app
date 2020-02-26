@@ -5,7 +5,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import { setSessionToken } from './util/session_api_util';
 import jwt_decode from 'jwt-decode';
-import { logout } from './actions/session_actions';
+import { login, logout } from './actions/session_actions';
 
 import axios from 'axios';
 import { fetchFortunes, fetchFortune } from './actions/fortune_actions';
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isAuthenticated: true,
             user: decoded
         }
-    }
+    };
     store = configureStore(preloadedState);
 
     const currentTime = Date.now() /1000;
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.fetchFortunes = fetchFortunes;
   window.fetchFortune = fetchFortune;
+  window.login = login;
 
   window.fetchCalculations = fetchCalculations;
   window.getState = store.getState;

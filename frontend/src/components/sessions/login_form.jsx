@@ -1,20 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+=======
+import React from "react";
+>>>>>>> master
 
 class LoginForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          email: "",
-          password: ""
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-    componentWillUnmount() {
-        this.props.clearErrors()
-    }
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
+<<<<<<< HEAD
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -32,13 +37,27 @@ class LoginForm extends React.Component {
             </ul>
         );
     }
+=======
+  handleSubmit(e) {
+    e.preventDefault();
+    debugger;
+    this.props.login(this.state);
+  }
+>>>>>>> master
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        })
-    }
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li className="errors" key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
+<<<<<<< HEAD
     render() {
         return (
           <div className="login-container">
@@ -89,6 +108,39 @@ class LoginForm extends React.Component {
           </div>
         );
     }
+=======
+  update(field) {
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+  }
+
+  render() {
+    return (
+      <div className="login-container">
+        <form className="login-form" onSubmit={this.handleSubmit}>
+          <input
+            className="input-field"
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="Email"
+          />
+          <br />
+          <input
+            className="input-field"
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="Password"
+          />
+          <button>Submit</button>
+        </form>
+      </div>
+    );
+  }
+>>>>>>> master
 }
 
-export default LoginForm
+export default LoginForm;

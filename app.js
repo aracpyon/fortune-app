@@ -7,34 +7,22 @@ const User = require('./models/User');
 const bodyParser = require('body-parser');
 const fortunes = require('./routes/api/fortunes');
 const calculations = require('./routes/api/calculations');
-//tells app  what source of request respond to
+const passport = require('passport');
 
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
-//these two lines of codes tell our app that we wanted to receive JSON requests
-//also respond to other softwares like postman
-//and in routes, we are gonna register our user
+app.use(passport.initialize());
+require("./config/passport")(passport);
 
-app.get("/", (req, res) => {
-  // debugger;
-  // const user = new User({
-  //   username: "jim",
-  //   email: "jim@jim.jim",
-  //   password: "jimsgreat123"
-  // })
-  // user.save();
-  res.send("test");
-});
+app.get("/", (req, res) => {res.send("test");});
 
 app.use("/api/users", users);
-
 app.use("/api/fortunes", fortunes);
 app.use("/api/calculations", calculations);
 

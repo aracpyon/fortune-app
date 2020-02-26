@@ -15,18 +15,20 @@ class RegistrationForm extends React.Component {
       kids: "",
       marriage: "",
       personality: ""
-    }
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillUnmount() {
-    this.props.clearErrors()
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.register(this.state)
+    this.props.register(this.state).then(() => {
+      this.props.history.push('/login');
+    });
   }
 
   renderErrors() {
@@ -42,9 +44,18 @@ class RegistrationForm extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    })
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+  }
+
+  updateSelect(field) {
+    return e => {
+      return this.setState({
+        [field]: e.currentTarget.selectedOptions[0].value
+      });
+    };
   }
 
   render() {
@@ -54,8 +65,11 @@ class RegistrationForm extends React.Component {
           <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
         </NavLink>
         <h2>Sign up to crack your love fortune.</h2>
-        <p>Already have an account?
-          <NavLink className="other-link" to="/login">Log in here</NavLink>
+        <p>
+          Already have an account?
+          <NavLink className="other-link" to="/login">
+            Log in here
+          </NavLink>
         </p>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <div className="fortune-style">
@@ -126,7 +140,11 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
-          <input type="date" className="input-field" />
+          <input
+            type="date"
+            className="input-field"
+            onChange={this.update("birthDate")}
+          />
           <div className="fortune-style">
             <div className="style-color"></div>
             <div className="style-color"></div>
@@ -137,7 +155,10 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
           </div>
           <div className="">
-            <select className="input-field" onChange={this.update("password2")}>
+            <select
+              className="input-field"
+              onChange={this.updateSelect("kids")}
+            >
               <option value="">Do you want kids?</option>
               <option value="1">Yes</option>
               <option value="0">No</option>
@@ -153,7 +174,10 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
           </div>
           <div className="">
-            <select className="input-field">
+            <select
+              className="input-field"
+              onChange={this.updateSelect("marriage")}
+            >
               <option value="">Do you want to get married?</option>
               <option value="1">Yes</option>
               <option value="0">No</option>
@@ -169,7 +193,10 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
           </div>
           <div className="">
-            <select className="input-field">
+            <select
+              className="input-field"
+              onChange={this.updateSelect("personality")}
+            >
               <option value="">Where is your ideal place to be?</option>
               <option value="1">Indoors</option>
               <option value="0">Outdoors</option>
