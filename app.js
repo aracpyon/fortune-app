@@ -9,7 +9,6 @@ const fortunes = require('./routes/api/fortunes');
 const calculations = require('./routes/api/calculations');
 //tells app  what source of request respond to
 
-
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
@@ -18,22 +17,24 @@ mongoose
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
 //these two lines of codes tell our app that we wanted to receive JSON requests
 //also respond to other softwares like postman
 //and in routes, we are gonna register our user
 
 app.get("/", (req, res) => {
   // debugger;
-  const user = new User({
-    username: "jim",
-    email: "jim@jim.jim",
-    password: "jimsgreat123"
-  })
-  user.save();
+  // const user = new User({
+  //   username: "jim",
+  //   email: "jim@jim.jim",
+  //   password: "jimsgreat123"
+  // })
+  // user.save();
   res.send("test");
 });
 
 app.use("/api/users", users);
+
 app.use("/api/fortunes", fortunes);
 app.use("/api/calculations", calculations);
 
