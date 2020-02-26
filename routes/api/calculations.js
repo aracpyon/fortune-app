@@ -1,9 +1,9 @@
+const Calculation = require('../../models/Calculations');
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
-const Calculation = require("../../models/Calculations");
 const ZodiacCalc = require("../../frontend/src/util/zodiac_calc_util");
 const Fortune = require("../../models/Fortune");
 

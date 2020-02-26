@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import * as SessionAPIUtils from './util/session_api_util';
 import Root from './components/root';
 import configureStore from './store/store';
 import { setSessionToken } from './util/session_api_util';
 import jwt_decode from 'jwt-decode';
 import { logout } from './actions/session_actions';
 
-// testing
 import axios from 'axios';
 import { fetchFortunes, fetchFortune } from './actions/fortune_actions';
-// testing
+import { fetchCalculations } from './actions/calculation_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -42,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.fetchFortunes = fetchFortunes;
   window.fetchFortune = fetchFortune;
+
+  window.fetchCalculations = fetchCalculations;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // testing 
