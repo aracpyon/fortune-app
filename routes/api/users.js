@@ -8,6 +8,10 @@ const jwt = require('jsonwebtoken');
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
+router.get('/twousers', (req, res) =>{
+  
+});
+
 router.get('/test', (req, res) => {
   res.json({ msg: "This is the user route" });
 });
@@ -20,7 +24,9 @@ router.get('/', (req, res) => {
     .catch(err => {
       console.error(err);
     });
-})
+});
+
+
 
 router.get('/:id', (req, res) => {
   // debugger
