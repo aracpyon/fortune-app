@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
-  // debugger
+  debugger
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if (!isValid) {
