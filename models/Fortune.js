@@ -16,4 +16,6 @@ const FortuneSchema = new Schema({
   }
 });
 
+//
+
 module.exports = Fortune = mongoose.model('fortune', FortuneSchema);
