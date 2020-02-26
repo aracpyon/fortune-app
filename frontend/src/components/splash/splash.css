@@ -6,7 +6,7 @@
     
 }
 
-p>.Signup-link{
+.Signup-link{
     position: relative;
     width: 400px;
     height: 200px;
@@ -14,6 +14,7 @@ p>.Signup-link{
     
 
 }
+
 
 body {
     background-image: url("/purple-background.png");
