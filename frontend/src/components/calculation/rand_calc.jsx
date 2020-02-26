@@ -6,6 +6,10 @@ class RandCalc extends React.Component {
     super(props);
   }
 
+  componentDidMount(){
+    this.props.fetchTwoRandomUsers();
+  }
+
   render(){
     return (
       <div>
