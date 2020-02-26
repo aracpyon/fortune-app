@@ -49,6 +49,7 @@ class RegistrationForm extends React.Component {
   render() {
     return (
       <div className="signup-container">
+        <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <input
             className="input-field"
@@ -109,7 +110,7 @@ class RegistrationForm extends React.Component {
           </div>
           <br />
           <div className="signup-button-div">
-            <button className="signup-button">SIGN UP</button>
+            <button className="signup-button">sign up</button>
           </div>
         </form>
       </div>

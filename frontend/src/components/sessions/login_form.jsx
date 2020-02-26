@@ -16,6 +16,8 @@ class LoginForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const user = Object.assign({}, this.state);
+        this.props.login(user);
     }
     
     renderErrors() {
@@ -39,7 +41,13 @@ class LoginForm extends React.Component {
     render() {
         return (
           <div className="login-container">
+              <img
+                src="/fortune_couple.PNG"
+                alt="logo"
+                className="main-logo"
+              />
             <form className="login-form" onSubmit={this.handleSubmit}>
+              <div></div>
               <input
                 className="input-field"
                 type="text"
@@ -47,7 +55,7 @@ class LoginForm extends React.Component {
                 onChange={this.update("email")}
                 placeholder="Email"
               />
-              <br/>
+              <br />
               <input
                 className="input-field"
                 type="text"
@@ -55,6 +63,10 @@ class LoginForm extends React.Component {
                 onChange={this.update("password")}
                 placeholder="Password"
               />
+              <br />
+              <div className="signup-button-div">
+                <button className="signup-button">log in</button>
+              </div>
             </form>
           </div>
         );

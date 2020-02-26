@@ -41,7 +41,7 @@ export const clearErrors = () => {
 }
 
 export const register = user => dispatch => {
-    debugger
+    // debugger
     return SessionAPIUtils.register(user)
     .then (
         user => dispatch(receiveUserLogin(user)),
