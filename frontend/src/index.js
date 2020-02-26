@@ -45,13 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchCalculations = fetchCalculations;
   window.createCalculation = postCalculation;
-
-  window.getStore = store.getState;
+  window.getState = store.getState;
   window.dispatch = store.dispatch;
   // testing 
   ReactDOM.render(<Root store={store}/>, root);
 
-})
+});
 
 window.axios = axios;
 
