@@ -6,10 +6,15 @@
     // margin-top: 100px;
 }
 
+.logo-link {
+    margin: auto;
+}
+
 .main-logo {
     width: 320px;
     height: 220px;
-    margin: auto;
+    // margin: auto;
+    cursor: pointer;
 }
 
 .signup-form {
@@ -44,6 +49,29 @@
     box-sizing: border-box;
 }
 
+div h2 {
+    font-family: 'Pacifico';
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+div p {
+    // font-family: ;
+    width: 320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #282828;
+}
+
+.other-link {
+    color: plum;
+}
 
 .input-field {
     display: block;
@@ -56,7 +84,7 @@
     height: 40px;
     border: none;
     border-radius: unset;
-    color: purple;
+    // color: purple;
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
@@ -88,6 +116,7 @@ div select {
     margin: auto;
     margin-bottom: 100px;
     padding: 16px 48px 16px;
+    cursor: pointer;
 }
 
 .fortune-style {

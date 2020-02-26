@@ -1,5 +1,6 @@
 import React from "react";
 import './sessions.scss';
+import { NavLink } from 'react-router-dom';
 
 class RegistrationForm extends React.Component {
   constructor(props) {
@@ -49,7 +50,13 @@ class RegistrationForm extends React.Component {
   render() {
     return (
       <div className="signup-container">
-        <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
+        <NavLink className="logo-link" to="/">
+          <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
+        </NavLink>
+        <h2>Sign up to crack your love fortune.</h2>
+        <p>Already have an account?
+          <NavLink className="other-link" to="/login">Log in here</NavLink>
+        </p>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <div className="fortune-style">
             <div className="style-color"></div>
