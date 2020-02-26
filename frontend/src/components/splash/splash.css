@@ -1,44 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+
 .fortune-cookie-img {
+    width: 20%;
+    margin: auto;
+    display: block;
+    padding-left: 80px;
+    padding-top: 50px;
+ 
     
-  z-index: -1;
-  position: absolute;
+  }
+  h1{
+    font-family: 'Pacifico';
+    color: white;
+    font-weight: 50;
+    font-size: 90px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    text-anchor: middle;
+  }
+  .Signup-link{
+    position: relative;
+    display: block;
+    align-items: center;
+    text-anchor: middle;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 40px;
+    font-family: 'Pacifico';
+    font-size: x-large;
+    margin: 0;
+    background-color: plum;
+    border: 3px solid plum;
+    border-radius: 40px;
+    width: 150px;
+    margin: 0 auto;
+    top: 300px;
+  }
   
-}
-
-.Signup-link{
-  position: relative;
-  display: block;
-  align-items: center;
-  text-anchor: middle;
-  text-align: center;
-  text-decoration: none;
-  padding: 20px;
-  margin: 0;
-  background-color: plum;
-  border: 3px solid plum;
-  border-radius: 40px;
-  width: 150px;
-  margin: 0 auto;
-  top: 470px;
-}
-
-.Login-link{
-  position: relative;
-  display: block;
-  align-items: center;
-  text-anchor: middle;
-  text-align: center;
-  text-decoration: none;
-  padding: 20px;
-  margin: 0;
-  background-color: plum;
-  border: 3px solid plum;
-  border-radius: 40px;
-  width: 150px;
-  margin: 0 auto;
-  top: 500px;
-}
-
-body {
-  background-image: url("/purple-background.png");
-}
+  .Login-link{
+    position: relative;
+    display: block;
+    align-items: center;
+    text-anchor: middle;
+    font-size: x-large;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 40px;
+    font-family: 'Pacifico';
+    margin: 0;
+    background-color: plum;
+    border: 3px solid plum;
+    border-radius: 40px;
+    width: 150px;
+    margin: 0 auto;
+    top: 330px;
+  }
+  
+  body {
+    background-image: url("/purple-background.png");
+  }
