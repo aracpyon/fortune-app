@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-=======
-import React from "react";
->>>>>>> master
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -19,31 +15,11 @@ class LoginForm extends React.Component {
     this.props.clearErrors();
   }
 
-<<<<<<< HEAD
-    handleSubmit(e) {
-        e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.login(user);
-    }
-    
-    renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li className="errors" key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    }
-=======
   handleSubmit(e) {
     e.preventDefault();
     debugger;
     this.props.login(this.state);
   }
->>>>>>> master
 
   renderErrors() {
     return (
@@ -57,58 +33,6 @@ class LoginForm extends React.Component {
     );
   }
 
-<<<<<<< HEAD
-    render() {
-        return (
-          <div className="login-container">
-            <NavLink className="logo-link" to="/">
-              <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
-            </NavLink>
-            <h2>See what fortunes await you today.</h2>
-            <p>Don't have an account?
-              <NavLink className="other-link" to="/signup">Sign up here</NavLink>
-            </p>
-            <form className="login-form" onSubmit={this.handleSubmit}>
-              <div className="fortune-style">
-                <div className="style-color"></div>
-                <div className="style-color"></div>
-              </div>
-              <input
-                className="input-field"
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
-              />
-              <div className="fortune-style">
-                <div className="style-color"></div>
-                <div className="style-color"></div>
-              </div>
-              <br />
-              <div className="fortune-style">
-                <div className="style-color"></div>
-                <div className="style-color"></div>
-              </div>
-              <input
-                className="input-field"
-                type="text"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-              />
-              <div className="fortune-style">
-                <div className="style-color"></div>
-                <div className="style-color"></div>
-              </div>
-              <br />
-              <div className="signup-button-div">
-                <button className="signup-button">log in</button>
-              </div>
-            </form>
-          </div>
-        );
-    }
-=======
   update(field) {
     return e =>
       this.setState({
@@ -119,7 +43,21 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="login-container">
+        <NavLink className="logo-link" to="/">
+          <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
+        </NavLink>
+        <h2>See what fortunes await you today.</h2>
+        <p>
+          Don't have an account?
+          <NavLink className="other-link" to="/signup">
+            Sign up here
+          </NavLink>
+        </p>
         <form className="login-form" onSubmit={this.handleSubmit}>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="text"
@@ -127,20 +65,35 @@ class LoginForm extends React.Component {
             onChange={this.update("email")}
             placeholder="Email"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
-            type="password"
+            type="text"
             value={this.state.password}
             onChange={this.update("password")}
             placeholder="Password"
           />
-          <button>Submit</button>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
+          <br />
+          <div className="signup-button-div">
+            <button className="signup-button">log in</button>
+          </div>
         </form>
       </div>
     );
   }
->>>>>>> master
+  
 }
 
 export default LoginForm;
