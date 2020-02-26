@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import * as SessionAPIUtils from './util/session_api_util';
 import Root from './components/root';
 import configureStore from './store/store';
 import { setSessionToken } from './util/session_api_util';
@@ -10,7 +9,7 @@ import { logout } from './actions/session_actions';
 
 import axios from 'axios';
 import { fetchFortunes, fetchFortune } from './actions/fortune_actions';
-import { fetchCalculations, postCalculation } from './actions/calculation_actions';
+import { fetchCalculations } from './actions/calculation_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,12 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.fetchFortunes = fetchFortunes;
   window.fetchFortune = fetchFortune;
-<<<<<<< HEAD
 
   window.fetchCalculations = fetchCalculations;
-  window.createCalculation = postCalculation;
-=======
->>>>>>> master
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // testing 

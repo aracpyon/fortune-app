@@ -14,17 +14,9 @@ const CalculationSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'fortunes'
     },
-<<<<<<< HEAD
     percentage: {
         type: Number,
         required: true
-=======
-    sentence:{
-        type: String
-    },
-    percentage: {
-        type: Number
->>>>>>> master
     }
 });
 
