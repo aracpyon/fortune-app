@@ -51,6 +51,10 @@ class RegistrationForm extends React.Component {
       <div className="signup-container">
         <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
         <form className="signup-form" onSubmit={this.handleSubmit}>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="text"
@@ -58,7 +62,15 @@ class RegistrationForm extends React.Component {
             onChange={this.update("email")}
             placeholder="Email"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="text"
@@ -66,7 +78,15 @@ class RegistrationForm extends React.Component {
             onChange={this.update("username")}
             placeholder="Username"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="password"
@@ -74,7 +94,15 @@ class RegistrationForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="password"
@@ -82,9 +110,25 @@ class RegistrationForm extends React.Component {
             onChange={this.update("password2")}
             placeholder="Confirm Password"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input type="date" className="input-field" />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <div className="">
             <select className="input-field" onChange={this.update("password2")}>
               <option value="">Do you want kids?</option>
@@ -92,7 +136,15 @@ class RegistrationForm extends React.Component {
               <option value="0">No</option>
             </select>
           </div>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <div className="">
             <select className="input-field">
               <option value="">Do you want to get married?</option>
@@ -100,13 +152,25 @@ class RegistrationForm extends React.Component {
               <option value="0">No</option>
             </select>
           </div>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <div className="">
             <select className="input-field">
               <option value="">Where is your ideal place to be?</option>
               <option value="1">Indoors</option>
               <option value="0">Outdoors</option>
             </select>
+          </div>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
           </div>
           <br />
           <div className="signup-button-div">

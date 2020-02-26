@@ -41,13 +41,12 @@ class LoginForm extends React.Component {
     render() {
         return (
           <div className="login-container">
-              <img
-                src="/fortune_couple.PNG"
-                alt="logo"
-                className="main-logo"
-              />
+            <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
             <form className="login-form" onSubmit={this.handleSubmit}>
-              <div></div>
+              <div className="fortune-style">
+                <div className="style-color"></div>
+                <div className="style-color"></div>
+              </div>
               <input
                 className="input-field"
                 type="text"
@@ -55,7 +54,15 @@ class LoginForm extends React.Component {
                 onChange={this.update("email")}
                 placeholder="Email"
               />
+              <div className="fortune-style">
+                <div className="style-color"></div>
+                <div className="style-color"></div>
+              </div>
               <br />
+              <div className="fortune-style">
+                <div className="style-color"></div>
+                <div className="style-color"></div>
+              </div>
               <input
                 className="input-field"
                 type="text"
@@ -63,6 +70,10 @@ class LoginForm extends React.Component {
                 onChange={this.update("password")}
                 placeholder="Password"
               />
+              <div className="fortune-style">
+                <div className="style-color"></div>
+                <div className="style-color"></div>
+              </div>
               <br />
               <div className="signup-button-div">
                 <button className="signup-button">log in</button>
