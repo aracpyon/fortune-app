@@ -34,8 +34,6 @@ export const fetchTwoRandomUsers = () => dispatch => {
 
 export const createCalculation = twoUsers => dispatch =>{
   return APIUtil.createCalculation(twoUsers)
-    .then(calculation => dispatch(receiveSingleCalculation(calculation))
-    .catch(err => console.log(err))
-
-  );
+    .then(calculation => dispatch(receiveSingleCalculation(calculation)))
+    .catch(err => console.log(err));
 };

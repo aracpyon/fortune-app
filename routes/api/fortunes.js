@@ -29,7 +29,7 @@ router.get("/randompos", (req, res) => {
 router.get("/user/:user_id", (req, res) => {
   Fortune.find({user: req.params.user_id})
     .then(fortunes => res.json(fortunes))
-    .catch(err => res.status(404).json({ nomatchhistoryfound: 'No Fortune history found from this user'}))
+    .catch(err => res.status(404).json({ nomatchhistoryfound: 'No Fortune history found from this user'}));
 });
 
 router.get("/:id", (req, res) => {
