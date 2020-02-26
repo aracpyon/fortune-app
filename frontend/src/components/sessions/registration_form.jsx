@@ -1,5 +1,5 @@
 import React from "react";
-import './sessions.scss';
+import "./sessions.scss";
 
 class RegistrationForm extends React.Component {
   constructor(props) {
@@ -14,18 +14,19 @@ class RegistrationForm extends React.Component {
       kids: "",
       marriage: "",
       personality: ""
-    }
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillUnmount() {
-    this.props.clearErrors()
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.register(this.state)
+    debugger
+    this.props.register(this.state);
   }
 
   renderErrors() {
@@ -41,9 +42,18 @@ class RegistrationForm extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    })
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+  }
+
+  updateSelect(field){
+    return e =>{
+      return this.setState({
+        [field]: e.currentTarget.selectedOptions[0].value
+      })
+    }
   }
 
   render() {
@@ -82,10 +92,10 @@ class RegistrationForm extends React.Component {
             placeholder="Confirm Password"
           />
           <br />
-          <input type="date" className="input-field" />
+          <input type="date" className="input-field" onChange={this.update('birthDate')}/>
           <br />
           <div className="">
-            <select className="input-field" onChange={this.update("password2")}>
+            <select className="input-field" onChange={this.updateSelect('kids')}>
               <option value="">Do you want kids?</option>
               <option value="1">Yes</option>
               <option value="0">No</option>
@@ -93,7 +103,7 @@ class RegistrationForm extends React.Component {
           </div>
           <br />
           <div className="">
-            <select className="input-field">
+            <select className="input-field" onChange={this.updateSelect('marriage')}>
               <option value="">Do you want to get married?</option>
               <option value="1">Yes</option>
               <option value="0">No</option>
@@ -101,7 +111,7 @@ class RegistrationForm extends React.Component {
           </div>
           <br />
           <div className="">
-            <select className="input-field">
+            <select className="input-field" onChange={this.updateSelect('personality')}>
               <option value="">Where is your ideal place to be?</option>
               <option value="1">Indoors</option>
               <option value="0">Outdoors</option>

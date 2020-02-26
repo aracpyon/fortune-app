@@ -2,17 +2,12 @@ import axios from 'axios';
 import qs from 'qs';
 
 export const getCalculations = () => {
-  return axios.get('api/calculations')
+  return axios.get('api/calculations');
 };
-
-// export const createCalculation = data => {
-//   return axios.post('api/calculations/', data)
-
-// };
 
 export const fetchTwoRandomUsers = () =>{
   return axios.get('api/users/twousers');
-}
+};
 
 // We have to do this because Node.js backend is only accepting
 // data using the urlencoded format
