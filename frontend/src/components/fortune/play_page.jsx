@@ -11,6 +11,9 @@ class PlayPage extends React.Component{
     // const { currentUser } = this.props;
     return (
       <div className="play-container">
+        
+        <h1 className="title">Choose a Person and Crack the Fortune!</h1>
+        
         <div className="play-users">
           <div className="current-user">
             <img
@@ -21,22 +24,20 @@ class PlayPage extends React.Component{
             <div className="username">Ara</div>
           </div>
           <div className="second-user">
-            <input
-              className="lookup-input"
-              placeholder="Look up user here" />
-            <div className="newUser-input"><p className="text">New User</p></div>
+            <input className="lookup-input" placeholder="Look up user here" />
+            <p className="or">Or</p>
+            <div className="newUser-input">
+              <p className="text">New User</p>
             </div>
+          </div>
         </div>
-        
-
-        
 
         {/* <div className="crack-fortune"> */}
-          <img
-            className="crack-fortune-button"
-            src="/crack_fortune.PNG"
-            alt="crack_fortune"
-          />
+        <img
+          className="crack-fortune-button"
+          src="/crack_fortune.PNG"
+          alt="crack_fortune"
+        />
         {/* </div> */}
       </div>
     );
