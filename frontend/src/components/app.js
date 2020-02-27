@@ -4,7 +4,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import LoginFormContainer from './sessions/login_form_container';
 import RegistrationFormContainer from './sessions/registration_form_container';
 import SplashPage from "./splash/main_spash";
-import { Route } from "react-router-dom";
 import RandomCalcContainer from "./calculation/rand_calc_container";
 import PlayPageContainer from "./fortune/play_container";
 
