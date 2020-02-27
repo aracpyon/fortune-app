@@ -14,10 +14,10 @@ class PlayPage extends React.Component{
 
   render(){
     if (!this.props.currentUser) { return null;} 
-    const { currentUser } = this.props;
+    const { currentUser, logout } = this.props;
     return (
       <div className="play-container">
-        
+        <button className="logout-button" onClick={logout}>Log out</button>
         <h1 className="title">Choose a Person and Crack the Fortune!</h1>
         
         <div className="play-users">
