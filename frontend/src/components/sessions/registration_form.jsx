@@ -65,7 +65,7 @@ class RegistrationForm extends React.Component {
           <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
         </NavLink>
         <h2>Sign up to crack your love fortune.</h2>
-        <p>
+        <p className="other">
           Already have an account?
           <NavLink className="other-link" to="/login">
             Log in here

@@ -47,7 +47,7 @@ class LoginForm extends React.Component {
           <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
         </NavLink>
         <h2>See what fortunes await you today.</h2>
-        <p>
+        <p className="other">
           Don't have an account?
           <NavLink className="other-link" to="/signup">
             Sign up here
