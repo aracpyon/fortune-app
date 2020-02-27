@@ -8,7 +8,7 @@ import jwt_decode from 'jwt-decode';
 import { login, logout } from './actions/session_actions';
 
 import axios from 'axios';
-import { fetchFortunes, fetchFortune } from './actions/fortune_actions';
+import { fetchFortunes, fetchFortune, fetchUserFortunes } from './actions/fortune_actions';
 import { fetchCalculations } from './actions/calculation_actions';
 
 
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.fetchFortunes = fetchFortunes;
   window.fetchFortune = fetchFortune;
+  window.fetchUserFortunes = fetchUserFortunes;
   window.login = login;
 
   window.fetchCalculations = fetchCalculations;
