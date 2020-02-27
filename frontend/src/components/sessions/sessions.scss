@@ -54,7 +54,6 @@
     margin: auto;
     width: 40%;
     min-width: 350px;
-    height: 210px;
     box-sizing: border-box;
 }
 
@@ -128,8 +127,10 @@ div select {
 .signup-button-div {
     width: 100%;
     display: flex;
+    height: 100px;
     flex-direction: column;
-    margin-bottom: 100px;
+    align-content: space-between;
+    // margin-bottom: 100px;
 }
 
 .signup-button {
@@ -166,7 +167,7 @@ div select {
     text-transform: uppercase;
     line-height: 20px;
     letter-spacing: .03em;
-    width: 263px;
+    width: 75%;
     align-items: center;
     margin: auto;
     padding: 16px 48px 16px;
@@ -186,4 +187,9 @@ div select {
     width: 35px;
     height: 10px;
     background-color: purple;
+}
+
+.delete-padding {
+    padding-top: 0;
+    padding-bottom: 0;
 }

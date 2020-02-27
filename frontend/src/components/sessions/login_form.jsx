@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
-          {this.renderErrors('email')}
+          {this.renderErrors("email")}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -77,21 +77,27 @@ class LoginForm extends React.Component {
             value={this.state.password}
             onChange={this.update("password")}
             placeholder="Password"
-            />
+          />
           <div className="fortune-style">
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
-            {this.renderErrors('password')}
+          {this.renderErrors("password")}
           <br />
-          <div className="signup-button-div">
+          <div className="signup-button-div ">
             <button className="signup-button">log in</button>
           </div>
           {/* <div className="signup-button-div">
           </div> */}
         </form>
-        <button onClick={() => this.props.login(this.props.demoUser)}
-          className="demo-button">Demo User</button>
+        <div className="login-form delete-padding">
+          <button
+            onClick={() => this.props.login(this.props.demoUser)}
+            className="demo-button"
+          >
+            Demo User
+          </button>
+        </div>
       </div>
     );
   }
