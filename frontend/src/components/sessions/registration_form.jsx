@@ -34,9 +34,9 @@ class RegistrationForm extends React.Component {
   renderErrors() {
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
+        {Object.keys(this.state.errors).map((error, i) => (
           <li className="errors" key={`error-${i}`}>
-            {error}
+            {this.state.errors[error]}
           </li>
         ))}
       </ul>
@@ -71,6 +71,7 @@ class RegistrationForm extends React.Component {
             Log in here
           </NavLink>
         </p>
+        {this.renderErrors()}
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <div className="fortune-style">
             <div className="style-color"></div>
