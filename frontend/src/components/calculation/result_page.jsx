@@ -4,10 +4,12 @@ import './result.scss';
 class ResultPage extends React.Component {
   constructor(props){
     super(props);
+  
   }
 
 
   render(){
+ 
     const { percentage } = this.props.calculation;
     const { sentence } = this.props.fortune;
     const { user_1, user_2 } = this.props.users;
@@ -19,7 +21,7 @@ class ResultPage extends React.Component {
           <div className="user">
             <img
               className="user-zodiac-image"
-              src={`/${user_1.zodiac}.PNG`}
+              src={`/${user_1.zodiac}.png`}
               alt="user_1-zodiac"
             />
             <div className="user-zodiac">{user_1.zodiac}</div>

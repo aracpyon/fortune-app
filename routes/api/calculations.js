@@ -9,8 +9,6 @@ const Fortune = require("../../models/Fortune");
 
 router.post("/", (req, res) => {
 
-  debugger
-
   const user_1 = {
     _id: req.body["user_1[id]"],
     zodiac: req.body["user_1[zodiac]"],
@@ -26,8 +24,8 @@ router.post("/", (req, res) => {
     marriage: parseInt(req.body["user_2[marriage]"]),
     personality: parseInt(req.body["user_2[personality]"])
   };
+ 
 
-  debugger
 
   // Calculates the compatibility based on zodiac
   const percentCompatZodiac = ZodiacCalc[user_1.zodiac][user_2.zodiac];
@@ -54,7 +52,7 @@ router.post("/", (req, res) => {
           sentence: fortune[0].sentence,
           percentage: final_percentage
         });
-        debugger
+        
         newCalculation
           .save()
           .then(calculation => {
@@ -76,7 +74,7 @@ router.post("/", (req, res) => {
           sentence: fortune[0].sentence,
           percentage: final_percentage
         });
-        debugger
+        
 
         newCalculation
           .save()
@@ -101,7 +99,7 @@ router.post("/", (req, res) => {
           sentence: fortune[0].sentence,
           percentage: final_percentage
         });
-        debugger
+        
 
         newCalculation
           .save()

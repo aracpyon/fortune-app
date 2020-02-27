@@ -6,7 +6,6 @@ import { logout } from '../../actions/session_actions';
 import { createCalculation } from '../../actions/calculation_actions';
 
 const mSTP = state => {
-  // debugger
   return {
     currentUser: state.session.user,
     allUsers: state.entities.users

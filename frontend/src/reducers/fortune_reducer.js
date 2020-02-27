@@ -19,11 +19,10 @@ const FortuneReducer = (state = { all: {}, user: {} }, action) => {
       newState.all = action.fortune.data;
       return newState;
     case RECEIVE_USER_FORTUNES:
-      // debugger
       newState.user = action.fortunes.data;
       return newState;
     case RECEIVE_SINGLE_CALCULATION:
-      return newState.all = action.calculation;
+      return newState.all = action.calculation.data.fortune;
     default:
       return state;
     

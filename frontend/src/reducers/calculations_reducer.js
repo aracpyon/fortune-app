@@ -27,7 +27,7 @@ const CalculationsReducer = (state = initialState, action) => {
       return Object.assign({}, state, { randomUsers: twoUsers });
     case RECEIVE_SINGLE_CALCULATION:
       return Object.assign({}, state, {
-        calculations: action.calculation.data
+        calculations: action.calculation.data.calculation
       });
     default:
       return state;
