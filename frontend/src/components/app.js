@@ -1,11 +1,12 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import LoginFormContainer from './sessions/login_form_container';
 import RegistrationFormContainer from './sessions/registration_form_container';
 import SplashPage from "./splash/main_spash";
 import RandomCalcContainer from "./calculation/rand_calc_container";
-import PlayPageContainer from "./fortune/play_container";
+import PlayContainer from "./fortune/play_container";
+import ResultContainer from './calculation/result_container';
 
 const App = () => (
   <div className="main-app-container">
@@ -14,7 +15,8 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer}/>
       <AuthRoute path="/signup" component={RegistrationFormContainer}/>
       <ProtectedRoute exact path="/randomcalc" component={RandomCalcContainer} />
-      <ProtectedRoute path="/play" component={PlayPageContainer} />
+      <ProtectedRoute path="/play" component={PlayContainer} />
+      <Route path="/result" component={ResultContainer} />
     </Switch>
   </div>
 );

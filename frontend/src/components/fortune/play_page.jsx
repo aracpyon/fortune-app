@@ -1,15 +1,22 @@
 import React from 'react';
 import "./play.scss";
+import { withRouter } from 'react-router-dom';
 
 class PlayPage extends React.Component{
   constructor(props){
     super(props);
-
-    this.handleClick = this.handleClick.bind(this)
+    this.state = { 
+      user_1: this.props.currentUser,
+      user_2: this.props.currentUser
+    }
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    debugger
+    this.props.createCalculation(this.state);
+
+    this.props.history.push('/result');
+  
   }
 
   render(){
@@ -32,7 +39,7 @@ class PlayPage extends React.Component{
           <div className="second-user">
             <input className="lookup-input" placeholder="Look up user here" />
             <p className="or">Or</p>
-            <div className="newUser-input" onClick={this.handleClick}>
+            <div className="newUser-input">
               <p className="text">New User</p>
             </div>
           </div>
@@ -43,6 +50,7 @@ class PlayPage extends React.Component{
           className="crack-fortune-button"
           src="/crack_fortune.PNG"
           alt="crack_fortune"
+          onClick={this.handleClick}
         />
         {/* </div> */}
       </div>
@@ -51,4 +59,4 @@ class PlayPage extends React.Component{
 
 }
 
-export default PlayPage;
+export default withRouter(PlayPage);
