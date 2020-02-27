@@ -8,10 +8,12 @@ const ZodiacCalc = require("../../frontend/src/util/zodiac_calc_util");
 const Fortune = require("../../models/Fortune");
 
 router.post("/", (req, res) => {
+
+  debugger
+
   const user_1 = {
-    _id: req.body["user_1[_id]"],
-    // zodiac: req.body["user_1[zodiac]"],
-    zodiac: "Libra",
+    _id: req.body["user_1[id]"],
+    zodiac: req.body["user_1[zodiac]"],
     kids: parseInt(req.body["user_1[kids]"]),
     marriage: parseInt(req.body["user_1[marriage]"]),
     personality: parseInt(req.body["user_1[personality]"])
@@ -20,11 +22,12 @@ router.post("/", (req, res) => {
   const user_2 = {
     _id: req.body["user_2[_id]"],
     zodiac: req.body["user_2[zodiac]"],
-    // zodiac: "Aquarius",
     kids: parseInt(req.body["user_2[kids]"]),
     marriage: parseInt(req.body["user_2[marriage]"]),
     personality: parseInt(req.body["user_2[personality]"])
   };
+
+  debugger
 
   // Calculates the compatibility based on zodiac
   const percentCompatZodiac = ZodiacCalc[user_1.zodiac][user_2.zodiac];
@@ -51,7 +54,7 @@ router.post("/", (req, res) => {
           sentence: fortune[0].sentence,
           percentage: final_percentage
         });
-
+        debugger
         newCalculation
           .save()
           .then(calculation => {
@@ -73,6 +76,7 @@ router.post("/", (req, res) => {
           sentence: fortune[0].sentence,
           percentage: final_percentage
         });
+        debugger
 
         newCalculation
           .save()
@@ -97,6 +101,7 @@ router.post("/", (req, res) => {
           sentence: fortune[0].sentence,
           percentage: final_percentage
         });
+        debugger
 
         newCalculation
           .save()

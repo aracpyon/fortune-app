@@ -1,4 +1,9 @@
-import { RECEIVE_CALCULATIONS, RECEIVE_TWO_RANDOM_USERS, RECEIVE_SINGLE_CALCULATION } from '../actions/calculation_actions';
+import { 
+  RECEIVE_CALCULATIONS, 
+  RECEIVE_TWO_RANDOM_USERS, 
+  RECEIVE_SINGLE_CALCULATION,
+  // SEND_CALCULATION 
+} from '../actions/calculation_actions';
 
 const initialState = {
   randomUsers: {

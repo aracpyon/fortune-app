@@ -14,7 +14,8 @@ class RegistrationForm extends React.Component {
       zodiac: "",
       kids: "",
       marriage: "",
-      personality: ""
+      personality: "",
+      errors: {}
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,20 +27,14 @@ class RegistrationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.register(this.state).then(() => {
-      this.props.history.push('/login');
-    });
+    this.props.register(this.state)
   }
 
-  renderErrors() {
+  renderErrors(field) {
     return (
-      <ul>
-        {/* {Object.keys(this.state.errors).map((error, i) => (
-          <li className="errors" key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))} */}
-      </ul>
+      <li className="errors" >
+        {this.props.errors[field]}
+      </li>
     );
   }
 
@@ -71,7 +66,6 @@ class RegistrationForm extends React.Component {
             Log in here
           </NavLink>
         </p>
-        {this.renderErrors()}
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -88,6 +82,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('email')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -104,6 +99,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('username')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -120,6 +116,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('password')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -136,6 +133,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('password2')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -150,6 +148,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('birthDate')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -169,6 +168,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('kids')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -188,6 +188,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('marriage')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -207,6 +208,7 @@ class RegistrationForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('personality')}
           <br />
           <div className="signup-button-div">
             <button className="signup-button">sign up</button>

@@ -1,5 +1,7 @@
 import React from "react";
 import "./play.scss";
+import { withRouter } from 'react-router-dom';
+import NavBarContainer from '../nav/nav_container';
 
 class PlayPage extends React.Component {
   constructor(props) {
@@ -42,7 +44,12 @@ class PlayPage extends React.Component {
   }
 
   handleClick() {
-    debugger;
+    this.props.createCalculation(this.state).then(
+      success => {
+        debugger
+        this.props.history.push('/result');
+      }
+    );
   }
 
   updateUser2(userId) {
@@ -103,10 +110,9 @@ class PlayPage extends React.Component {
     }
 
     return (
+      <>
+        <NavBarContainer/>
       <div className="play-container">
-        <button className="logout-button" onClick={logout}>
-          Log out
-        </button>
         <h1 className="title">Choose a Person and Crack the Fortune!</h1>
 
         <div className="play-users">
@@ -130,8 +136,10 @@ class PlayPage extends React.Component {
         />
         {/* </div> */}
       </div>
+        </>
     );
   }
 }
+// export default PlayPage;
+export default withRouter(PlayPage);
 
-export default PlayPage;
