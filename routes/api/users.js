@@ -5,6 +5,9 @@ const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require("jsonwebtoken");
 const passport = require('passport');
+const findZodiac = require('../../helpers/zodiac_string_calc');
+
+
 
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
@@ -63,12 +66,15 @@ router.post("/register", (req, res) => {
         .status(400)
         .json({ email: "A user is already registered with that email" });
     } else {
+
+      
+
       const newUser = new User({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password,
         birthDate: req.body.birthDate,
-        zodiac: req.body.zodiac,
+        zodiac: findZodiac(req.body.birthDate),
         kids: req.body.kids,
         marriage: req.body.marriage,
         personality: req.body.personality
@@ -81,7 +87,29 @@ router.post("/register", (req, res) => {
           newUser
             .save()
             //if it's saved send it to front end
-            .then(user => res.send(user))
+            .then(user => {
+              const payload = {
+                id: user.id,
+                username: user.username,
+                email: user.email,
+                birthDate: user.birthDate,
+                zodiac: user.zodiac,
+                kids: user.kids,
+                marriage: user.marriage,
+                personality: user.personality
+              };
+      
+              jwt.sign(
+                payload,keys.secretOrKey,{ expiresIn: 3600 },
+                (err, token) => {
+                  res.json({
+                    success: true,
+                    token: "Bearer " + token
+                  });
+                }
+              );
+              // res.send(user);
+            })
             .catch(err => console.log(err));
         });
       });
@@ -112,7 +140,12 @@ router.post("/login", (req, res) => {
         const payload = {
           id: user.id,
           username: user.username,
-          email: user.email
+          email: user.email,
+          birthDate: user.birthDate,
+          zodiac: user.zodiac,
+          kids: user.kids,
+          marriage: user.marriage,
+          personality: user.personality
         };
 
         jwt.sign(

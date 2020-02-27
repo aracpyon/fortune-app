@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import RegistrationForm from "./registration_form";
-import { register, clearErrors } from "../../actions/session_actions";
+import { register, clearErrors, logout } from "../../actions/session_actions";
 
 const mSTP = (state, ownProps) => {
   return {

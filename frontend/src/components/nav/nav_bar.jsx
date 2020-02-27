@@ -17,7 +17,7 @@ class NavBar extends React.Component{
                 <button className = "logout-button" onClick={this.handleClick}>Logout</button>
             )
         }
-
+    }
 
 };
 

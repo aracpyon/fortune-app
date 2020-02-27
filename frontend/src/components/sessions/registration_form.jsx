@@ -1,5 +1,6 @@
 import React from "react";
-import "./sessions.scss";
+import './sessions.scss';
+import { NavLink } from 'react-router-dom';
 
 class RegistrationForm extends React.Component {
   constructor(props) {
@@ -60,7 +61,21 @@ class RegistrationForm extends React.Component {
   render() {
     return (
       <div className="signup-container">
+        <NavLink className="logo-link" to="/">
+          <img src="/fortune_couple.PNG" alt="logo" className="main-logo" />
+        </NavLink>
+        <h2>Sign up to crack your love fortune.</h2>
+        <p className="other">
+          Already have an account?
+          <NavLink className="other-link" to="/login">
+            Log in here
+          </NavLink>
+        </p>
         <form className="signup-form" onSubmit={this.handleSubmit}>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="text"
@@ -68,7 +83,15 @@ class RegistrationForm extends React.Component {
             onChange={this.update("email")}
             placeholder="Email"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="text"
@@ -76,7 +99,15 @@ class RegistrationForm extends React.Component {
             onChange={this.update("username")}
             placeholder="Username"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="password"
@@ -84,7 +115,15 @@ class RegistrationForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             className="input-field"
             type="password"
@@ -92,13 +131,29 @@ class RegistrationForm extends React.Component {
             onChange={this.update("password2")}
             placeholder="Confirm Password"
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <input
             type="date"
             className="input-field"
             onChange={this.update("birthDate")}
           />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <div className="">
             <select
               className="input-field"
@@ -109,7 +164,15 @@ class RegistrationForm extends React.Component {
               <option value="0">No</option>
             </select>
           </div>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <div className="">
             <select
               className="input-field"
@@ -120,7 +183,15 @@ class RegistrationForm extends React.Component {
               <option value="0">No</option>
             </select>
           </div>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <div className="">
             <select
               className="input-field"
@@ -131,9 +202,13 @@ class RegistrationForm extends React.Component {
               <option value="0">Outdoors</option>
             </select>
           </div>
+          <div className="fortune-style">
+            <div className="style-color"></div>
+            <div className="style-color"></div>
+          </div>
           <br />
           <div className="signup-button-div">
-            <button className="signup-button">SIGN UP</button>
+            <button className="signup-button">sign up</button>
           </div>
         </form>
       </div>
