@@ -8,13 +8,12 @@ import { Route } from "react-router-dom";
 import RandomCalcContainer from "./calculation/rand_calc_container";
 import PlayPageContainer from "./fortune/play_container";
 
-
 const App = () => (
   <div className="main-app-container">
     <Switch>
-      <AuthRoute exact path="/" component={SplashPage} />
-      <AuthRoute path="/login" component={LoginFormContainer}/>
-      <AuthRoute path="/signup" component={RegistrationFormContainer}/>
+      <Route exact path="/" component={SplashPage} />
+      <Route path="/login" component={LoginFormContainer}/>
+      <Route path="/signup" component={RegistrationFormContainer}/>
       <Route exact path="/randomcalc" component={RandomCalcContainer} />
       <Route path="/play" component={PlayPageContainer} />
     </Switch>

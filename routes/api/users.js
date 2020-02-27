@@ -81,7 +81,24 @@ router.post("/register", (req, res) => {
           newUser
             .save()
             //if it's saved send it to front end
-            .then(user => res.send(user))
+            .then(user => {
+              const payload = {
+                id: user.id,
+                username: user.username,
+                email: user.email
+              };
+      
+              jwt.sign(
+                payload,keys.secretOrKey,{ expiresIn: 3600 },
+                (err, token) => {
+                  res.json({
+                    success: true,
+                    token: "Bearer " + token
+                  });
+                }
+              );
+              // res.send(user);
+            })
             .catch(err => console.log(err));
         });
       });

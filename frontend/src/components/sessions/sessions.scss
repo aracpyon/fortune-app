@@ -2,10 +2,42 @@
     display: flex;
     position: absolute;
     width: 100%;
-    margin-top: 100px;
+    flex-direction: column;
+    // margin-top: 100px;
+}
+
+.logo-link {
+    margin: auto;
+}
+
+.main-logo {
+    width: 320px;
+    height: 220px;
+    // margin: auto;
+    cursor: pointer;
 }
 
 .signup-form {
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    min-width: 350px;
+    height: 700px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    // margin-top: 100px;
+}
+
+.login-form {
     padding-top: 30px;
     position: relative;
     display: flex;
@@ -17,13 +49,56 @@
     box-sizing: border-box;
 }
 
+div h2 {
+    font-family: 'Pacifico';
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+div p {
+    // font-family: ;
+    width: 320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #282828;
+}
+
+.other-link {
+    color: plum;
+}
+
 .input-field {
     display: block;
     background-origin: padding-box;
-    width: 100%;
+    // width: 100%;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     height: 40px;
-    padding-left: 5px;
+    border: none;
     border-radius: unset;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .03em;
+    text-align: center;
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+div select {
+    width: 100%;
+    background-color: white;
+    -webkit-appearance: none;
 }
 
 .signup-button-div {
@@ -32,11 +107,35 @@
 }
 
 .signup-button {
-    border-radius: 500px;
+    border-radius: 15px;
     background-color: plum;
     font-weight: bold;
-    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: .03em;
+    width: 75%;
     align-items: center;
     margin: auto;
+    margin-bottom: 100px;
     padding: 16px 48px 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.signup-button:active {
+    outline: none;
+}
+
+.fortune-style {
+    height: 10px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.style-color {
+    width: 35px;
+    height: 10px;
+    background-color: purple;
 }

@@ -4,11 +4,17 @@ import "./play.scss";
 class PlayPage extends React.Component{
   constructor(props){
     super(props);
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    debugger
   }
 
   render(){
-
-    // const { currentUser } = this.props;
+    if (!this.props.currentUser) { return null;} 
+    const { currentUser } = this.props;
     return (
       <div className="play-container">
         
@@ -21,12 +27,12 @@ class PlayPage extends React.Component{
               src="/default_user.PNG"
               alt="default_user"
             />
-            <div className="username">Ara</div>
+            <div className="username">{currentUser.username}</div>
           </div>
           <div className="second-user">
             <input className="lookup-input" placeholder="Look up user here" />
             <p className="or">Or</p>
-            <div className="newUser-input">
+            <div className="newUser-input" onClick={this.handleClick}>
               <p className="text">New User</p>
             </div>
           </div>
