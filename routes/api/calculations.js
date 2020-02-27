@@ -19,8 +19,8 @@ router.post("/", (req, res) => {
 
   const user_2 = {
     _id: req.body["user_2[_id]"],
-    // zodiac: req.body["user_2[zodiac]"],
-    zodiac: "Aquarius",
+    zodiac: req.body["user_2[zodiac]"],
+    // zodiac: "Aquarius",
     kids: parseInt(req.body["user_2[kids]"]),
     marriage: parseInt(req.body["user_2[marriage]"]),
     personality: parseInt(req.body["user_2[personality]"])
@@ -77,7 +77,9 @@ router.post("/", (req, res) => {
         newCalculation
           .save()
           .then(calculation => {
-            return res.json({ calculation, fortune: fortune[0] });
+            return res.json({ 
+              calculation, 
+              fortune: fortune[0] });
           })
           .catch(err => res.json(err));
       })

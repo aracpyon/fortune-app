@@ -6,7 +6,8 @@ import { fetchUsers } from "../../actions/user_actions";
 const mSTP = state => {
   // debugger
   return {
-    currentUser: state.session.user
+    currentUser: state.session.user,
+    allUsers: state.entities.users
   };
 };
 
