@@ -46,7 +46,6 @@ class PlayPage extends React.Component {
   handleClick() {
     this.props.createCalculation(this.state).then(
       success => {
-        debugger
         this.props.history.push('/result');
       }
     );
