@@ -1,6 +1,6 @@
 .first-record{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 h1{
     margin-bottom: 0;
@@ -37,3 +37,25 @@ li{
 li:last-child{
     font-weight: 700;
 }
+.logout-button{
+    justify-content: end;
+    display: inline;
+    border: 1px solid plum;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    width: 80px;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    line-height: 10px;
+    border-left: 1px solid purple;
+    font-family: 'Pacifico';
+    font-size: 18px;
+    color: purple;
+    background-color: plum;;
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+    }
+  }

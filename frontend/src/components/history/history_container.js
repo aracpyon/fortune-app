@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import HistoryPage from "./history_page";
-
+import { logout } from '../../actions/session_actions';
 const mapStateToProps = (state) => ({
     history: {
        user_1: state.session.user,
@@ -18,8 +18,9 @@ const mapStateToProps = (state) => ({
    }
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//     fetchUserFortunes: () => dispatch(fetchUserFortunes())
-// });
+const mapDispatchToProps = (dispatch) => ({
+    logout: () => dispatch(logout())
+    // fetchUserFortunes: () => dispatch(fetchUserFortunes())
+});
 
 export default connect(mapStateToProps)(HistoryPage);

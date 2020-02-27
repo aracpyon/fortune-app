@@ -3,9 +3,35 @@
     border: 1px solid plum;
     cursor: pointer;
     height: 40px;
+    text-align: center;
     width: 80px;
     border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    line-height: 10px;
+    border-left: 1px solid purple;
     font-family: 'Pacifico';
+    font-size: 18px;
+    color: purple;
+    background-color: plum;;
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+    }
+  }
+
+  .history-button{
+    float: right;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    border-radius: 8px;
+    text-align-last: center;
+    text-decoration: none;
+    font-family: 'Pacifico';
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     font-size: 18px;
     color: purple;
     background-color: plum;;

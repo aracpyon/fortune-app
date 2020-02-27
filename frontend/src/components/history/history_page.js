@@ -1,6 +1,6 @@
 import React from 'react';
 import "./history.scss";
-
+import {Link} from 'react-router-dom'
 class HistoryPage extends React.Component {
     constructor(props){
         super(props);
@@ -9,9 +9,13 @@ class HistoryPage extends React.Component {
    debugger;
                 return(
         
-        <ul><h1>History</h1>
+        <ul>
+        <button className = "logout-button" onClick={this.props.logout}>Logout</button>
+        <Link className="play-button" to="/play">Play</Link>
+
+            <h1>History for {this.props.history["user_1"]["username"]}</h1>
         <div className="first-record">
-        <h3>{this.props.history["user_1"]["username"]}</h3>
+        
         <h3>{this.props.history["user_2"]["username"]}</h3>
         </div>
         <li>Fortune Id: {this.props.calculation["fortune_id"]}</li>
