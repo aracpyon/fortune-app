@@ -2,8 +2,8 @@ import * as APIUtil from '../util/calculation_api_util';
 
 export const RECEIVE_CALCULATIONS = 'RECEIVE_CALCULATIONS';
 export const RECEIVE_SINGLE_CALCULATION = "RECEIVE_SINGLE_CALCULATION";
-// export const RECEIVE_CALCULATION = 'RECEIVE_CALCULATION';
 export const RECEIVE_TWO_RANDOM_USERS = "RECEIVE_TWO_RANDOM_USERS";
+
 
 export const receiveCalculations = calculations => ({
   type: RECEIVE_CALCULATIONS,
@@ -20,6 +20,7 @@ export const receiveTwoRandomUsers = twoRandomUsers => ({
   twoRandomUsers
 });
 
+
 export const fetchCalculations = () => dispatch => {
   return APIUtil.getCalculations()
     .then(calculations => dispatch(receiveCalculations(calculations)))
@@ -33,7 +34,9 @@ export const fetchTwoRandomUsers = () => dispatch => {
 };
 
 export const createCalculation = twoUsers => dispatch =>{
+  
   return APIUtil.createCalculation(twoUsers)
-    .then(calculation => dispatch(receiveSingleCalculation(calculation)))
-    .catch(err => console.log(err));
+    .then(calculation => {
+     dispatch(receiveSingleCalculation(calculation))
+    }).catch(err => console.log(err));
 };

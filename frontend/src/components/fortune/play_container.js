@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import PlayPage from './play_page';
 import { logout } from '../../actions/session_actions';
+import { createCalculation } from '../../actions/calculation_actions';
 
 
 const mSTP = (state) => {
@@ -12,7 +13,9 @@ const mSTP = (state) => {
 
 const mDTP = dispatch => {
   return {
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    createCalculation: twoUsers => dispatch(createCalculation(twoUsers))
+   
   }
 }
 
