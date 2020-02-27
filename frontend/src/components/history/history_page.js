@@ -6,11 +6,19 @@ class HistoryPage extends React.Component {
         super(props);
     }
     render() {
-   
+   debugger;
                 return(
         
-        <ul><h2>History</h2>
-        {Object.keys(this.props.history)}
+        <ul><h1>History</h1>
+        <div className="first-record">
+        <h3>{this.props.history["user_1"]["username"]}</h3>
+        <h3>{this.props.history["user_2"]["username"]}</h3>
+        </div>
+        <li>Fortune Id: {this.props.calculation["fortune_id"]}</li>
+        <li>Percentage: {this.props.calculation["percentage"]}</li>
+        <li>Favorability: {this.props.fortunes["favorability"]}</li>
+        <li>{this.props.fortunes["sentence"]}</li>
+
       </ul>
         )
     }   

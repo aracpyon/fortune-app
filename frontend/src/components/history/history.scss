@@ -1,0 +1,39 @@
+.first-record{
+    display: flex;
+    justify-content: space-evenly;
+}
+h1{
+    margin-bottom: 0;
+    padding: 0;
+}
+h3{
+    border: 1px solid plum;
+    padding: 20px;
+    background-color: plum;
+    font-family: Pacifico;
+    color: purple;
+    font-size: 20px;
+    font-weight: 100;
+   
+    border-radius: 30px;
+
+}
+ul{
+    list-style: none;
+
+    margin: auto;
+}
+li{
+    list-style: none;
+    text-align: center;
+    margin: auto;
+   
+    border: 2px solid plum;
+    border-radius: 20px;
+    width: 50%;
+    line-height: 50px;
+    background: white;
+}
+li:last-child{
+    font-weight: 700;
+}
