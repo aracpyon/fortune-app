@@ -32,7 +32,15 @@ router.get("/test", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  User.find()
+  // Filters the output to only have the username
+  User.find({ }, { 
+    username: 1,
+    birthDate: 1,
+    zodiac: 1,
+    kids: 1,
+    marriage: 1,
+    personality: 1
+  })
     .then(docs => {
       return res.json(docs);
     })
@@ -110,7 +118,7 @@ router.post("/register", (req, res) => {
               );
               // res.send(user);
             })
-            .catch(err => console.log(err));
+            .catch(err => res.status(404).json(err));
         });
       });
 

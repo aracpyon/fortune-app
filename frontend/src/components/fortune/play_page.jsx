@@ -8,6 +8,10 @@ class PlayPage extends React.Component{
     this.handleClick = this.handleClick.bind(this)
   }
 
+  componentDidMount(){
+    this.props.fetchUsers();
+  }
+
   handleClick() {
     debugger
   }

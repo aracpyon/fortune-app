@@ -1,4 +1,4 @@
-const Calculation = require('../../models/Calculations');
+const Calculation = require("../../models/Calculations");
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
@@ -8,7 +8,6 @@ const ZodiacCalc = require("../../frontend/src/util/zodiac_calc_util");
 const Fortune = require("../../models/Fortune");
 
 router.post("/", (req, res) => {
-
   const user_1 = {
     _id: req.body["user_1[_id]"],
     // zodiac: req.body["user_1[zodiac]"],
@@ -41,7 +40,7 @@ router.post("/", (req, res) => {
 
   if (final_percentage < 50) {
     Fortune.aggregate([
-      { $match: { favorability: "negative" } },
+      { $match: { favorability: "Negative" } },
       { $sample: { size: 1 } }
     ])
       .then(fortune => {
@@ -56,14 +55,14 @@ router.post("/", (req, res) => {
         newCalculation
           .save()
           .then(calculation => {
-            return res.json(calculation);
+            return res.json({ calculation, fortune: fortune[0] });
           })
           .catch(err => res.json(err));
       })
       .catch(err => res.json(err));
   } else if (final_percentage > 50 && final_percentage > 80) {
     Fortune.aggregate([
-      { $match: { favorability: "positive" } },
+      { $match: { favorability: "Positive" } },
       { $sample: { size: 1 } }
     ])
       .then(fortune => {
@@ -78,14 +77,14 @@ router.post("/", (req, res) => {
         newCalculation
           .save()
           .then(calculation => {
-            return res.json(calculation);
+            return res.json({ calculation, fortune: fortune[0] });
           })
           .catch(err => res.json(err));
       })
       .then(err => res.json(err));
   } else {
     Fortune.aggregate([
-      { $match: { favorability: "super positive" } },
+      { $match: { favorability: "Super Positive" } },
       { $sample: { size: 1 } }
     ])
       .then(fortune => {
@@ -100,7 +99,10 @@ router.post("/", (req, res) => {
         newCalculation
           .save()
           .then(calculation => {
-            return res.json(calculation);
+            return res.json({
+              calculation,
+              fortune: fortune[0]
+            });
           })
           .catch(err => res.json(err));
       })
