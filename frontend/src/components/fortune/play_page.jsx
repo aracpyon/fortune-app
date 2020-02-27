@@ -1,5 +1,6 @@
 import React from 'react';
 import "./play.scss";
+import NavBarContainer from '../nav/nav_container';
 
 class PlayPage extends React.Component{
   constructor(props){
@@ -16,8 +17,9 @@ class PlayPage extends React.Component{
     if (!this.props.currentUser) { return null;} 
     const { currentUser, logout } = this.props;
     return (
+      <>
+        <NavBarContainer/>
       <div className="play-container">
-        <button className="logout-button" onClick={logout}>Log out</button>
         <h1 className="title">Choose a Person and Crack the Fortune!</h1>
         
         <div className="play-users">
@@ -46,6 +48,7 @@ class PlayPage extends React.Component{
         />
         {/* </div> */}
       </div>
+        </>
     );
   }
 
