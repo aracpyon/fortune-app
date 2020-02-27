@@ -16,7 +16,7 @@ export const createCalculation = twoUsers => {
   return axios({
     method: 'post',
     url: 'api/calculations',
-    data: qs.stringify(twoUsers),
+    data: qs.stringify(twoUsers), 
     headers: {
       'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
     }

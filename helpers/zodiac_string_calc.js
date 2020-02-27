@@ -1,9 +1,8 @@
 module.exports = findZodiac = date => {
-  // Get rid of all non-number characters
+  // Get rid of all non-number characters\
   const strippedDate = date.replace(/[^0-9]/g, "");
   // The "1" is so we do not lose leading zeros
   const justMonthsAndDay = parseInt("1" + strippedDate.slice(4));
-
   if (justMonthsAndDay >= 10000 && justMonthsAndDay <= 10119) {
     return "Capricorn";
   } else if (justMonthsAndDay >= 10120 && justMonthsAndDay <= 10218) {
