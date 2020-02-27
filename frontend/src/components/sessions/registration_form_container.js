@@ -11,8 +11,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
   return {
     register: user => dispatch(register(user)),
-    clearErrors: () => dispatch(clearErrors()),
-    logout: () => dispatch(logout())
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
