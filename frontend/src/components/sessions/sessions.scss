@@ -121,6 +121,7 @@ div select {
     width: 75%;
     align-items: center;
     margin: auto;
+    border: 1px solid plum;
     padding: 16px 48px 16px;
     cursor: pointer;
     outline: none;
@@ -141,6 +142,7 @@ div select {
     background-color: plum;
     font-weight: bold;
     font-size: 14px;
+    border: 1px solid plum;
     text-transform: uppercase;
     line-height: 20px;
     letter-spacing: .03em;
