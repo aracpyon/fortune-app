@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif|Pacifico|Patrick+Hand&display=swap");
-body{
-  color: white;
-  font-family: 'Pacifico';
-}
+// body{
+//   // color: white;
+//   // font-family: 'Pacifico';
+// }
+
+
 
 .user-zodiac-image{
   width: 200px;
@@ -20,6 +22,8 @@ body{
   .title{
     font-size: 50px;
     margin: 20px 0;
+    color: white;
+    font-family: 'Pacifico';
   }
 
   .result-contents{
@@ -30,11 +34,15 @@ body{
       margin: 20px 30px 0 30px;
       text-align: center;
       .user-zodiac{
+        color: white;
         font-size: 20px;
+        font-family: 'Pacifico';
       }
       .user-username{
         font-size: 50px;
         margin-bottom: -6px;
+        color: white;
+        font-family: 'Pacifico';
       }
     }
 
@@ -44,6 +52,8 @@ body{
     display: flex;
     align-items: center;
     margin-bottom: 85px;
+    color: white;
+    font-family: 'Pacifico';
     .percentage{
     // font-family: 'Noto Serif',;
     font-style: italic;
@@ -61,6 +71,8 @@ body{
     .sentence{
       font-size: 40px;
       width: 600px;
+      color: white;
+      font-family: 'Pacifico';
     }
     .your-fortune{
       width: 600px;
