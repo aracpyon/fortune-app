@@ -21,15 +21,11 @@ class LoginForm extends React.Component {
     this.props.login(this.state);
   }
 
-  renderErrors() {
+  renderErrors(field) {
     return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li className="errors" key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))}
-      </ul>
+      <li className="errors" >
+        {this.props.errors[field]}
+      </li>
     );
   }
 
@@ -53,7 +49,6 @@ class LoginForm extends React.Component {
             Sign up here
           </NavLink>
         </p>
-        {this.renderErrors()}
         <form className="login-form" onSubmit={this.handleSubmit}>
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -70,6 +65,7 @@ class LoginForm extends React.Component {
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+          {this.renderErrors('email')}
           <br />
           <div className="fortune-style">
             <div className="style-color"></div>
@@ -81,16 +77,21 @@ class LoginForm extends React.Component {
             value={this.state.password}
             onChange={this.update("password")}
             placeholder="Password"
-          />
+            />
           <div className="fortune-style">
             <div className="style-color"></div>
             <div className="style-color"></div>
           </div>
+            {this.renderErrors('password')}
           <br />
           <div className="signup-button-div">
             <button className="signup-button">log in</button>
           </div>
+          {/* <div className="signup-button-div">
+          </div> */}
         </form>
+        <button onClick={() => this.props.login(this.props.demoUser)}
+          className="demo-button">Demo User</button>
       </div>
     );
   }

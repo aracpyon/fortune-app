@@ -5,7 +5,11 @@ import { login, clearErrors } from '../../actions/session_actions';
 const mSTP = (state, ownProps) => {
     // debugger
     return {
-        errors: state.errors.session
+        errors: state.errors.session,
+        demoUser: {
+            email: 'demo@gmail.com',
+            password: 'password123'
+        }
     };
 };
 

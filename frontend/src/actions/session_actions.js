@@ -47,8 +47,8 @@ export const register = user => dispatch => {
       SessionAPIUtils.setSessionToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
-    },
-    errors => dispatch(receiveSessionErrors(errors.response.data))
+    })
+    .catch(errors => dispatch(receiveSessionErrors(errors))
   );
 };
 

@@ -1,0 +1,15 @@
+.logout-button{
+    justify-self: left;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    border-radius: 8px;
+    font-family: 'Pacifico';
+    font-size: 18px;
+    color: purple;
+    background-color: plum;;
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+    }
+  }
