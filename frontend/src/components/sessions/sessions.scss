@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Mukta|Nanum+Gothic|Noto+Sans+JP|Quicksand&display=swap');
+
 .signup-container {
     display: flex;
     position: absolute;
     width: 100%;
     flex-direction: column;
+    font-family: 'Mukta';
     // margin-top: 100px;
 }
 
@@ -88,13 +91,32 @@ div h2 {
     border-radius: unset;
     font-weight: bold;
     font-size: 14px;
+    color: #202020;
     line-height: 20px;
     letter-spacing: .03em;
     text-align: center;
+    text-align-last: center;
+    font-family: 'Nanum Gothic';
+}
+
+.input-field::placeholder {
+    color: #202020;
 }
 
 .input-field:focus {
     outline: none;
+}
+
+.birthdate {
+    padding: 10px;
+    text-align: center;
+    text-align-last: center;
+}
+
+option {
+    text-align: center;
+    
+    margin: auto;
 }
 
 div select {
