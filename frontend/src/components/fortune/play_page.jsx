@@ -7,8 +7,8 @@ class PlayPage extends React.Component {
 
     this.state = {
       allUsers: [],
-      user_1: "",
-      user_2: ""
+      user_1: this.props.currentUser,
+      user_2: undefined
     };
 
     this.changeComplete = this.changeComplete.bind(this);
@@ -69,6 +69,39 @@ class PlayPage extends React.Component {
       return null;
     }
     const { currentUser, logout } = this.props;
+
+    let user2Element = null;
+
+    if (this.state.user_2) {
+      user2Element = (
+        <div className="current-user">
+          <img
+            className="default-user-image"
+            src="/default_user.PNG"
+            alt="default_user"
+          />
+          <div className="username">{this.state.user_2.username}</div>
+        </div>
+      );
+    } else {
+      user2Element = (
+        <div className="second-user">
+          <div className="lookup-container">
+            <input
+              className="lookup-input"
+              placeholder="Look up user here"
+              onChange={this.changeComplete()}
+            />
+            {dropDownNames}
+          </div>
+          <p className="or">Or</p>
+          <div className="newUser-input" onClick={this.handleClick}>
+            <p className="text">New User</p>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="play-container">
         <button className="logout-button" onClick={logout}>
@@ -85,20 +118,7 @@ class PlayPage extends React.Component {
             />
             <div className="username">{currentUser.username}</div>
           </div>
-          <div className="second-user">
-            <div className="lookup-container">
-              <input
-                className="lookup-input"
-                placeholder="Look up user here"
-                onChange={this.changeComplete()}
-              />
-              {dropDownNames}
-            </div>
-            <p className="or">Or</p>
-            <div className="newUser-input" onClick={this.handleClick}>
-              <p className="text">New User</p>
-            </div>
-          </div>
+          {user2Element}
         </div>
 
         {/* <div className="crack-fortune"> */}
@@ -106,6 +126,7 @@ class PlayPage extends React.Component {
           className="crack-fortune-button"
           src="/crack_fortune.PNG"
           alt="crack_fortune"
+          onClick={this.handleClick}
         />
         {/* </div> */}
       </div>
