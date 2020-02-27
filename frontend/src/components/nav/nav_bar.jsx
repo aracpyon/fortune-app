@@ -6,12 +6,9 @@ class NavBar extends React.Component{
         super(props);
     }
     render() {
-        const currentUser = this.props.currentUser;
-        if (currentUser) {
-            return (
-                <button className = "logout-button" onClick={this.props.logout}>Logout</button>
-            )
-        }
+        return (
+            <button className = "logout-button" onClick={this.props.logout}>Logout</button>
+        )
     }
 }
 export default NavBar;
