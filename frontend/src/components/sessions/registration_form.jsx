@@ -14,7 +14,8 @@ class RegistrationForm extends React.Component {
       zodiac: "",
       kids: "",
       marriage: "",
-      personality: ""
+      personality: "",
+      errors: {}
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,17 +27,15 @@ class RegistrationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.register(this.state).then(() => {
-      this.props.history.push('/login');
-    });
+    this.props.register(this.state)
   }
 
   renderErrors() {
     return (
       <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
+        {Object.keys(this.props.errors).map((error, i) => (
           <li className="errors" key={`error-${i}`}>
-            {this.state.errors[error]}
+            {this.props.errors[error]}
           </li>
         ))}
       </ul>
