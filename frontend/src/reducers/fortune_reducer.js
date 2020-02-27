@@ -6,7 +6,7 @@ const FortuneReducer = (state = { all: {}, user: {} }, action) => {
   let newState = Object.assign({}, state);
   switch(action.type){
     case RECEIVE_FORTUNES:
-      // debugger
+      debugger
       let AllFortunes = {};
       action.fortunes.data.forEach(fortune => {
         AllFortunes[fortune._id] = fortune
@@ -14,7 +14,7 @@ const FortuneReducer = (state = { all: {}, user: {} }, action) => {
       newState.all = AllFortunes;
       return newState;
     case RECEIVE_FORTUNE:
-      // debugger
+      debugger
       newState.all = action.fortune.data;
       return newState;
     case RECEIVE_USER_FORTUNES:

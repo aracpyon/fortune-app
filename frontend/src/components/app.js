@@ -6,6 +6,7 @@ import RegistrationFormContainer from './sessions/registration_form_container';
 import SplashPage from "./splash/main_spash";
 import RandomCalcContainer from "./calculation/rand_calc_container";
 import PlayPageContainer from "./fortune/play_container";
+import HistoryPageContainer from "./history/history_container";
 
 const App = () => (
   <div className="main-app-container">
@@ -15,6 +16,7 @@ const App = () => (
       <AuthRoute path="/signup" component={RegistrationFormContainer}/>
       <ProtectedRoute exact path="/randomcalc" component={RandomCalcContainer} />
       <ProtectedRoute path="/play" component={PlayPageContainer} />
+      <ProtectedRoute path="/history" component={HistoryPageContainer} />
     </Switch>
   </div>
 );
