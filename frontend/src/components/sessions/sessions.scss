@@ -51,7 +51,7 @@
     margin: auto;
     width: 40%;
     min-width: 350px;
-    height: 587px;
+    height: 210px;
     box-sizing: border-box;
 }
 
@@ -83,10 +83,6 @@ div h2 {
     display: block;
     background-origin: padding-box;
     // width: 100%;
-    -webkit-appearance: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     height: 40px;
     border: none;
     border-radius: unset;
@@ -110,6 +106,8 @@ div select {
 .signup-button-div {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .signup-button {
@@ -123,10 +121,10 @@ div select {
     width: 75%;
     align-items: center;
     margin: auto;
-    margin-bottom: 100px;
     padding: 16px 48px 16px;
     cursor: pointer;
     outline: none;
+    margin-bottom: 20px;
 }
 
 .signup-button:hover{
@@ -136,6 +134,23 @@ div select {
 
 .signup-button:active {
     outline: none;
+}
+
+.demo-button {
+    border-radius: 15px;
+    background-color: plum;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: .03em;
+    width: 300px;
+    align-items: center;
+    margin: auto;
+    padding: 16px 48px 16px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 20px;
 }
 
 .fortune-style {

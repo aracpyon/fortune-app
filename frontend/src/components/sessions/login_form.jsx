@@ -23,9 +23,9 @@ class LoginForm extends React.Component {
 
   renderErrors(field) {
     return (
-          <li className="errors" >
-            {this.props.errors[field]}
-          </li>
+      <li className="errors" >
+        {this.props.errors[field]}
+      </li>
     );
   }
 
@@ -87,7 +87,11 @@ class LoginForm extends React.Component {
           <div className="signup-button-div">
             <button className="signup-button">log in</button>
           </div>
+          {/* <div className="signup-button-div">
+          </div> */}
         </form>
+        <button onClick={() => this.props.login(this.props.demoUser)}
+          className="demo-button">Demo User</button>
       </div>
     );
   }

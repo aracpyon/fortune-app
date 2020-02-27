@@ -6,9 +6,10 @@ const mSTP = (state, ownProps) => {
     // debugger
     return {
         errors: state.errors.session,
-        // demoUser: {
-            
-        // }
+        demoUser: {
+            email: 'demo@gmail.com',
+            password: 'password123'
+        }
     };
 };
 
