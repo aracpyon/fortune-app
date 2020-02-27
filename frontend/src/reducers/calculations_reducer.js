@@ -1,4 +1,9 @@
-import { RECEIVE_CALCULATIONS, RECEIVE_TWO_RANDOM_USERS, RECEIVE_SINGLE_CALCULATION } from '../actions/calculation_actions';
+import { 
+  RECEIVE_CALCULATIONS, 
+  RECEIVE_TWO_RANDOM_USERS, 
+  RECEIVE_SINGLE_CALCULATION,
+  // SEND_CALCULATION 
+} from '../actions/calculation_actions';
 
 const initialState = {
   randomUsers: {
@@ -22,7 +27,7 @@ const CalculationsReducer = (state = initialState, action) => {
       return Object.assign({}, state, { randomUsers: twoUsers });
     case RECEIVE_SINGLE_CALCULATION:
       return Object.assign({}, state, {
-        calculations: action.calculation.data
+        calculations: action.calculation.data.calculation
       });
     default:
       return state;

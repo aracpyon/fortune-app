@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif|Pacifico|Patrick+Hand&display=swap");
+// body{
+//   // color: white;
+//   // font-family: 'Pacifico';
+// }
+
+
+
+.user-zodiac-image{
+  width: 200px;
+}
+
+.percentage{
+  font-size: 50px;
+}
+
+.result-page-container{
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title{
+    font-size: 50px;
+    margin: 20px 0;
+    color: white;
+    font-family: 'Pacifico';
+  }
+
+  .result-contents{
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    .user{
+      margin: 20px 30px 0 30px;
+      text-align: center;
+      .user-zodiac{
+        color: white;
+        font-size: 20px;
+        font-family: 'Pacifico';
+      }
+      .user-username{
+        font-size: 50px;
+        margin-bottom: -6px;
+        color: white;
+        font-family: 'Pacifico';
+      }
+    }
+
+
+  }
+  .percents{
+    display: flex;
+    align-items: center;
+    margin-bottom: 85px;
+    color: white;
+    font-family: 'Pacifico';
+    .percentage{
+    // font-family: 'Noto Serif',;
+    font-style: italic;
+    font-size: 150px;
+    }
+    .percent-mark{
+      padding-top: 80px;
+      padding-left: 20px;
+      font-size: 80px;
+    }
+  }
+
+  .result-sentence{
+    text-align: center;
+    .sentence{
+      font-size: 40px;
+      width: 600px;
+      color: white;
+      font-family: 'Pacifico';
+    }
+    .your-fortune{
+      width: 600px;
+    }
+  }
+  
+}
