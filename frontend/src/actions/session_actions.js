@@ -21,11 +21,11 @@ const receiveSessionErrors = errors => {
   };
 };
 
-const receiveUserLogin = () => {
-  return {
-    type: RECEIVE_USER_LOGIN
-  };
-};
+// const receiveUserLogin = () => {
+//   return {
+//     type: RECEIVE_USER_LOGIN
+//   };
+// };
 
 const logoutCurrentUser = () => {
   return {
