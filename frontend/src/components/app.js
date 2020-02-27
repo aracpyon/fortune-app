@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
-import { AuthRoute } from '../util/route_utils';
+import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import LoginFormContainer from './sessions/login_form_container';
 import RegistrationFormContainer from './sessions/registration_form_container';
 import SplashPage from "./splash/main_spash";
@@ -11,11 +11,11 @@ import PlayPageContainer from "./fortune/play_container";
 const App = () => (
   <div className="main-app-container">
     <Switch>
-      <Route exact path="/" component={SplashPage} />
-      <Route path="/login" component={LoginFormContainer}/>
-      <Route path="/signup" component={RegistrationFormContainer}/>
-      <Route exact path="/randomcalc" component={RandomCalcContainer} />
-      <Route path="/play" component={PlayPageContainer} />
+      <AuthRoute exact path="/" component={SplashPage} />
+      <AuthRoute path="/login" component={LoginFormContainer}/>
+      <AuthRoute path="/signup" component={RegistrationFormContainer}/>
+      <ProtectedRoute exact path="/randomcalc" component={RandomCalcContainer} />
+      <ProtectedRoute path="/play" component={PlayPageContainer} />
     </Switch>
   </div>
 );

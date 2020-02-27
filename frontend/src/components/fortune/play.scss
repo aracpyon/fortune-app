@@ -6,6 +6,22 @@
   flex-direction: column;
   align-items: center;
 
+  .logout-button{
+    justify-self: left;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    border-radius: 8px;
+    font-family: 'Pacifico';
+    font-size: 18px;
+    color: purple;
+    background-color: plum;;
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+    }
+  }
+
   .title{
     font-size: 40px;
   }
@@ -63,7 +79,7 @@
         padding: 0 15px;
         text-align: center;
         vertical-align: middle;
-        background-color: plum;;
+        background-color: plum;
         width: 80%;
         height: 60px;
         color: purple;
