@@ -141,7 +141,7 @@ class RegistrationForm extends React.Component {
           </div>
           <input
             type="date"
-            className="input-field"
+            className="input-field birthdate"
             onChange={this.update("birthDate")}
           />
           <div className="fortune-style">
