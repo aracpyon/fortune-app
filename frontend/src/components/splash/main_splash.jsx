@@ -15,7 +15,7 @@ class SplashPage extends React.Component {
                
                 <NavLink className="Signup-link" to="/signup">Sign Up</NavLink>
                 <NavLink className="Login-link" to="/login">Log In</NavLink>
-        
+                <NavLink className="creator-link" to="/creators">The Creators</NavLink>
             </div>
         )
     }
