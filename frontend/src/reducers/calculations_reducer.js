@@ -2,6 +2,7 @@ import {
   RECEIVE_CALCULATIONS, 
   RECEIVE_TWO_RANDOM_USERS, 
   RECEIVE_SINGLE_CALCULATION,
+  RECEIVE_USER_CALCULATIONS,
   // SEND_CALCULATION 
 } from '../actions/calculation_actions';
 
@@ -29,6 +30,8 @@ const CalculationsReducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         calculations: action.calculation.data.calculation
       });
+    case RECEIVE_USER_CALCULATIONS: 
+      return action.calculations;
     default:
       return state;
   }

@@ -33,9 +33,9 @@ export const fetchFortune = fortuneId => dispatch => {
     .catch(err => console.log(err))
 };
 
-export const fetchUserFortunes = userId => dispatch => {
+export const fetchUserFortunes = user_id => dispatch => {
   debugger
-  return APIUtil.getUserFortunes(userId)
+  return APIUtil.getUserFortunes(user_id)
     .then(fortunes => dispatch(receiveUserFortunes(fortunes)))
     .catch(err => console.log(err))
 };
