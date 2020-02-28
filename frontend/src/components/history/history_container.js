@@ -6,10 +6,11 @@ import { fetchUserFortunes } from "../../actions/fortune_actions";
 const mapStateToProps = (state) => {
     return{
         currentUser: state.session.user,
-        fortunes: state.entities.fortunes.all,
+        // fortunes: state.entities.fortunes.all,
+        fortunes: state.entities.fortunes,
         calculations: state.entities.calculations,
         users: state.entities.users
-    }
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -18,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
     logout: () => dispatch(logout()),
     fetchUserFortunes: userId => dispatch(fetchUserFortunes(userId)),
     fetchUserCalculations: (userId) => dispatch(fetchUserCalculations(userId))
-    }
+    };
     
 };
 
