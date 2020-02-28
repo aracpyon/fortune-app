@@ -51,9 +51,9 @@ export const createCalculation = twoUsers => dispatch =>{
     }).catch(err => console.log(err));
 };
 
-export const fetchUserCalculations = user_id => dispatch => {
-  return APIUtil.getUserCalculations(user_id)
-  .then(calculations => {
-    dispatch(receiveUserCalculations(calculations))
-  }).catch(err => console.log(err));
-}
+// export const fetchUserCalculations = user_id => dispatch => {
+//   return APIUtil.getUserCalculations(user_id)
+//   .then(calculations => {
+//     dispatch(receiveUserCalculations(calculations))
+//   }).catch(err => console.log(err));
+// }
