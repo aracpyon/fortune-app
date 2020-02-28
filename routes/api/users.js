@@ -50,7 +50,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  // debugger
+
   User.findOne({ _id: req.params.id })
     .then(user => {
       return res.json(user);
@@ -61,7 +61,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/register", (req, res) => {
-  // debugger
+
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if (!isValid) {

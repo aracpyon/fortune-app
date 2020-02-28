@@ -6,7 +6,7 @@ module.exports = function validateFortuneInput(data){
 
   data.sentence = validText(data.sentence) ? data.sentence : '';
   data.favorability = validText(data.favorability) ? data.favorability : '';
-  // debugger
+
   if (!Validator.isLength(data.sentence, { min: 10 })) {
     errors.sentence = 'Fortune must be more than 10 characters';
   }
