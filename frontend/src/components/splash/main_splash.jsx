@@ -9,7 +9,7 @@ class SplashPage extends React.Component {
             <div className="main-splash-container">
             
                 <div className="center-image-section"> 
-                    <img className="fortune-cookie-img" src="/fortune_couple.png" alt="fortune-cookie" />
+                    <img className="fortune-cookie-img" src="/fortune_couple.PNG" alt="fortune-cookie" />
                 </div>
                 <div><h1>Get Your Fortune Today</h1></div>
                
