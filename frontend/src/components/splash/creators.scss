@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+.creator-container {
+    .creator-container h2 {
+        font-family: 'Pacifico';
+        font-size: 50px;
+    }
+    
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 60px;
+        .pair-div {
+            margin: auto;
+
+            .creator-div {
+                font-family: 'Nanum Gothic';
+                font-size: 20px;
+                font-weight: bold;
+                // margin: 30px;
+        
+                .creators {
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    background-color: unset;
+                    padding: unset;
+                    border: unset;
+                    text-align: center;
+                    font-family: 'Bree Serif';
+                    font-size: 30px;
+                    font-weight: bolder;
+                    margin: 15px 0;
+                    color: white;
+                    background-color: #202020;
+                }
+
+                p {
+                    text-align: center;
+                    margin: unset;
+                    color: white;
+                    font-size: 17px;
+                }
+
+                .icons {
+                    text-align: center;
+                    width: 90px;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                }
+            }
+
+        }
+        
+        .home-link {
+            display: flex;
+            margin: auto;
+            
+            a {
+                img {
+                    margin: auto;
+                    width: 250px;
+                    // height: 150px;
+                    margin-bottom: 50px;
+                }&:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

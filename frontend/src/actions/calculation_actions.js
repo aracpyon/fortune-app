@@ -25,6 +25,12 @@ export const receiveTwoRandomUsers = twoRandomUsers => ({
 });
 
 
+export const fetchUserCalculations = userId => dispatch => {
+  return APIUtil.getUserCalculations(userId)
+  .then(calculations => dispatch(receiveCalculations(calculations)))
+  .catch(err => console.log(err))
+};
+
 export const fetchCalculations = () => dispatch => {
   return APIUtil.getCalculations()
     .then(calculations => dispatch(receiveCalculations(calculations)))

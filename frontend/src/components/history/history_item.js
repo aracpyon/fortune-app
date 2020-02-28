@@ -1,6 +1,7 @@
 import React from 'react';
 
 const HistoryItem = (props) => {
+
   
   const { fortune, calculation, users } = props;
   return(
@@ -18,6 +19,7 @@ const HistoryItem = (props) => {
 
 
   
+
 
 
 export default HistoryItem;
