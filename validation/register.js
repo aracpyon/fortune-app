@@ -1,4 +1,4 @@
-const Validator = require("Validator");
+const Validator = require("validator");
 // ^ Validator is a library ^
 const validText = require("./validations");
 
