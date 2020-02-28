@@ -5,6 +5,10 @@ export const getCalculations = () => {
   return axios.get('api/calculations');
 };
 
+export const getUserCalculations = userId => {
+  return axios.get(`api/calculations/user/${userId}`);
+}
+
 export const fetchTwoRandomUsers = () =>{
   return axios.get('api/users/twousers');
 };

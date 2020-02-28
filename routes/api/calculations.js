@@ -119,4 +119,11 @@ router.get("/", (req, res) => {
   Calculation.find().then(allCalc => res.json(allCalc));
 });
 
+router.get("/user/:user_id", (req, res) => {
+  Calculation.find({ user_1: req.params.user_id })
+  .then(calculations =>
+    res.json(calculations))
+  .catch(err => console.log(err))
+});
+
 module.exports = router;

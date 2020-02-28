@@ -25,6 +25,7 @@ router.get("/randompos", (req, res) => {
 });
 
 router.get("/user/:user_id", (req, res) => {
+
   Fortune.find().lean()
     .then(fortunes => {
       Calculation.find({ user_1: req.params.user_id })
@@ -32,6 +33,7 @@ router.get("/user/:user_id", (req, res) => {
           const fortunesObj = {};
           const calculationFortunes = calculations.map(
             calculation => {
+         
               return calculation.fortune_id.toJSON();
             }
           );
@@ -49,7 +51,7 @@ router.get("/user/:user_id", (req, res) => {
               returnArr.push(fortunesObj[fortuneId]);
             }
           });
-      
+    
           return res.json(returnArr);
         })
         .catch(err => res.json(err));

@@ -2,7 +2,7 @@ import * as APIUtil from "../util/fortune_api_util";
 
 export const RECEIVE_FORTUNES = 'RECEIVE_FORTUNES';
 export const RECEIVE_FORTUNE = 'RECEIVE_FORTUNE';
-export const RECEIVE_USER_FORTUNES = 'RECEIVE_USER_FORTUNES';
+// export const RECEIVE_USER_FORTUNES = 'RECEIVE_USER_FORTUNES';
 
 export const receiveFortunes = fortunes => ({
   type: RECEIVE_FORTUNES,
@@ -14,10 +14,10 @@ export const receiveFortune = fortune => ({
   fortune
 })
 
-export const receiveUserFortunes = fortunes => ({
-  type: RECEIVE_USER_FORTUNES,
-  fortunes
-});
+// export const receiveUserFortunes = fortunes => ({
+//   type: RECEIVE_USER_FORTUNES,
+//   fortunes
+// });
 
 export const fetchFortunes = () => dispatch => {
   // debugger
@@ -36,7 +36,7 @@ export const fetchFortune = fortuneId => dispatch => {
 export const fetchUserFortunes = userId => dispatch => {
   debugger
   return APIUtil.getUserFortunes(userId)
-    .then(fortunes => dispatch(receiveUserFortunes(fortunes)))
+    .then(fortunes => dispatch(receiveFortunes(fortunes)))
     .catch(err => console.log(err))
 };
 

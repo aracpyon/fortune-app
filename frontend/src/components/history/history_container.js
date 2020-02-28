@@ -1,19 +1,25 @@
 import { connect } from "react-redux";
 import HistoryPage from "./history_page";
 import { logout } from '../../actions/session_actions';
-import  {fetchCalculations} from "../../actions/calculation_actions";
-import {fetchUserFortunes} from "../../actions/fortune_actions";
+import  {fetchUserCalculations} from "../../actions/calculation_actions";
+import { fetchUserFortunes } from "../../actions/fortune_actions";
 const mapStateToProps = (state) => {
-    debugger;
     return{
-   fortunes: state.entities.fortunes,
-   calculations: state.entities.calculations}
+        currentUser: state.session.user,
+        fortunes: state.entities.fortunes.all,
+        calculations: state.entities.calculations,
+        users: state.entities.users
+    }
 };
 
-const mapDispatchToProps = (dispatch) => ({
-    logout: () => dispatch(logout()),
-    fetchUserFortunes: () => dispatch(fetchUserFortunes()),
-    fetchCalculations: () => dispatch(fetchCalculations())
-});
+const mapDispatchToProps = (dispatch) => {
 
-export default connect(mapStateToProps)(HistoryPage);
+    return {
+    logout: () => dispatch(logout()),
+    fetchUserFortunes: userId => dispatch(fetchUserFortunes(userId)),
+    fetchUserCalculations: (userId) => dispatch(fetchUserCalculations(userId))
+    }
+    
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HistoryPage);
