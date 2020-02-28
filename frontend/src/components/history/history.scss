@@ -1,41 +1,61 @@
-.first-record{
-    display: flex;
-    justify-content: center;
-}
+
 h1{
     margin-bottom: 0;
     padding: 0;
 }
-h3{
+
+.lovematchcontainer{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    
+}
+div.calcperc{
+    font-weight:bold;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: italic;
+    
+}
+.calcperc:after{
+    content: "%";
+    font-size: x-large;
+}
+.fortune_sent{
+    padding-bottom: 10px;
+    font-size: xx-large;
+    font-family: Pacifico;
+    font-weight: 100;
+}
+.love_matches{
     border: 1px solid plum;
-    padding: 20px;
+    height: 100%;
     background-color: plum;
     font-family: Pacifico;
     color: purple;
     font-size: 20px;
-    font-weight: 100;
-   
-    border-radius: 30px;
-
-}
-ul{
-    list-style: none;
-
-    margin: auto;
-}
-li{
-    list-style: none;
+    display: absolute;
+    width: 40%;
+    padding: 10px;
+    justify-content: space-evenly;
+    text-transform: capitalize;
     text-align: center;
-    margin: auto;
-   
-    border: 2px solid plum;
-    border-radius: 20px;
-    width: 50%;
-    line-height: 50px;
-    background: white;
+    display: flex;
+    font-weight: 100;
+    border-radius: 30px;
+    margin: 0 auto;
+    font-size: x-large;
+
 }
-li:last-child{
-    font-weight: 700;
+.fortuneInfo{
+    border: 1px solid plum;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 60px;
+    width: 100%;
+
 }
 .logout-button{
     justify-content: end;
@@ -59,3 +79,8 @@ li:last-child{
       background-color: orchid;
     }
   }
+
+.history-item-container{
+    color: white;
+    justify-content: space-evenly;
+}
