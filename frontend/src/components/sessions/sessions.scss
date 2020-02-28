@@ -149,6 +149,7 @@ div select {
     cursor: pointer;
     outline: none;
     margin-bottom: 20px;
+    border: none;
 }
 
 .signup-button:hover{
@@ -176,6 +177,12 @@ div select {
     cursor: pointer;
     outline: none;
     margin-bottom: 20px;
+    transition: all .4s ease;
+    border: none;
+    &:hover{
+        cursor: pointer;
+    background-color: orchid;
+    }
 }
 
 .fortune-style {

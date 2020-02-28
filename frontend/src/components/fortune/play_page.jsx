@@ -126,14 +126,14 @@ class PlayPage extends React.Component {
           {user2Element}
         </div>
 
-        {/* <div className="crack-fortune"> */}
+        
         <img
           className="crack-fortune-button"
           src="/crack_fortune.PNG"
           alt="crack_fortune"
           onClick={this.handleClick}
         />
-        {/* </div> */}
+        
       </div>
         </>
     );

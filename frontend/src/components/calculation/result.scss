@@ -5,7 +5,6 @@
 // }
 
 
-
 .user-zodiac-image{
   width: 200px;
 }
@@ -21,7 +20,7 @@
   align-items: center;
   .title{
     font-size: 50px;
-    margin: 20px 0;
+    margin: 0;
     color: white;
     font-family: 'Pacifico';
   }
@@ -79,4 +78,33 @@
     }
   }
   
+  
 }
+  .play-button-div{
+    position: relative;
+    width: 100%;
+    .play-again{
+    padding: 10px;
+    position: absolute;
+    // float: right;
+    right: 0;
+    bottom: 40px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;;
+    line-height: 40px;
+    border-radius: 8px;
+    text-align-last: center;
+    text-decoration: none;
+    font-family: 'Pacifico';
+    font-size: 18px;
+    color: purple;
+    background-color: plum;
+    transition: all .4s ease;
+
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+    }
+  }
+  }
