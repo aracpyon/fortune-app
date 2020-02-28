@@ -3,7 +3,6 @@ import React from "react";
 const HistoryItem = props => {
   if (!props) { return null }
   const { fortune, calculation, users } = props;
-  debugger
   return (
     <div className="history-item-container">
       <div className="lovematchcontainer">
