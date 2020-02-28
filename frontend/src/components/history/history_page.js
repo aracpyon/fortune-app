@@ -31,7 +31,7 @@ class HistoryPage extends React.Component {
                 getFortune = fortune;
               }
             });
-            return <HistoryItem calculation={calculation} fortune={getFortune} />;
+            return <HistoryItem calculation={calculation} fortune={getFortune} users={users}/>;
           });
     }
     
@@ -43,7 +43,7 @@ class HistoryPage extends React.Component {
         <Link className="play-button" to="/play">
           Play
         </Link>
-        <h1>History for {currentUser.username}</h1>
+        <h1 className="history-title">History for {currentUser.username}</h1>
         {historyItem}
   
       </div>

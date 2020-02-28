@@ -26,7 +26,7 @@ export const createCalculation = twoUsers => {
     }
   });
 };
-export const getUserCalculations = (user_id) => {
-  return axios.get(`api/fortunes/user/${user_id}`);
+// export const getUserCalculations = (user_id) => {
+//   return axios.get(`api/fortunes/user/${user_id}`);
 
-};
+// };

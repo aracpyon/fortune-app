@@ -24,13 +24,15 @@
 
   .title {
     font-size: 50px;
+    // margin-bottom: 40px;
     font-family: 'Pacifico';
     color: white;
     font-weight: 50;
     text-align: center;
     width: 100%;
     text-anchor: middle;
-    margin: 40px 0;
+    // margin: 40px 0;
+    margin: 0;
   }
 
   .play-users {
@@ -64,7 +66,7 @@
       flex-direction: column;
      
       .lookup-container{
-        width: 500px;
+        width: 300px;
         text-align: center;
         .lookup-input {
           position:relative;
