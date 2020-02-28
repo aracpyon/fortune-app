@@ -19,10 +19,12 @@
     font-family: 'Pacifico';
     font-size: 18px;
     color: purple;
-    background-color: plum;;
+    background-color: plum;
+    
     &:hover{
       cursor: pointer;
       background-color: orchid;
+      border-bottom: none;
     }
   }
 
@@ -46,5 +48,6 @@
     &:hover{
       cursor: pointer;
       background-color: orchid;
+      border: none;
     }
   }

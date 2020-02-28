@@ -7,7 +7,7 @@ class HistoryPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.doDebugger = this.doDebugger.bind(this);
+  
   }
 
   componentDidMount() {
@@ -18,12 +18,7 @@ class HistoryPage extends React.Component {
 
   render() {
     const { currentUser, fortunes, users, calculations } = this.props;
-    // if (
-    //   this.props.calculations === undefined ||
-    //   this.props.fortunes === undefined
-    // ) {
-    //   return null;
-    // }
+
 
     let historyItem = null;
 
