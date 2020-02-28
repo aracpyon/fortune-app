@@ -22,7 +22,7 @@ h1{
 }
 
 .Signup-link{
-  /* position: relative; */
+  color: purple;
   display: block;
   align-items: center;
   text-anchor: middle;
@@ -42,6 +42,7 @@ h1{
   outline: none;
   border: none;
   margin-bottom: 20px;
+
 }
 
 .Signup-link:hover{
@@ -49,7 +50,7 @@ h1{
   background-color: orchid;
 }
 .Login-link{
-  /* position: relative; */
+  color: purple;
   display: block;
   align-items: center;
   text-anchor: middle;
