@@ -1,7 +1,11 @@
 
 h1{
     margin-bottom: 0;
-    padding: 0;
+    padding-top: 30px;
+    display: block;
+    text-indent: 130px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .lovematchcontainer{
@@ -85,3 +89,28 @@ div.calcperc{
     color: white;
     justify-content: space-evenly;
 }
+
+
+.play-button{
+    float: right;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    border-radius: 8px;
+    text-align-last: center;
+    text-decoration: none;
+    font-family: 'Pacifico';
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 18px;
+    color: purple;
+    background-color: plum;
+    transition: all .4s ease;
+
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+      border: none;
+    }
+  }
