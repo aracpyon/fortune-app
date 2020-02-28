@@ -9,7 +9,7 @@ import { login, logout } from './actions/session_actions';
 
 import axios from 'axios';
 import { fetchFortunes, fetchFortune, fetchUserFortunes } from './actions/fortune_actions';
-import { fetchCalculations } from './actions/calculation_actions';
+import { fetchUserCalculations } from './actions/calculation_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchUserFortunes = fetchUserFortunes;
   window.login = login;
 
-  window.fetchCalculations = fetchCalculations;
+  window.fetchUserCalculations = fetchUserCalculations;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // testing 
