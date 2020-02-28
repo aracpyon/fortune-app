@@ -8,7 +8,7 @@ export const getFortune = fortuneId => {
   return axios.get(`api/fortunes/${fortuneId}`);
 };
 
-export const getUserFortunes = (id) => {
-  return axios.get(`api/fortunes/user/${id}`);
+export const getUserFortunes = (user_id) => {
+  return axios.get(`api/fortunes/user/${user_id}`);
 };
 
