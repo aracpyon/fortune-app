@@ -79,3 +79,15 @@ body {
   background-image: url("/purple-background.png");
 }
 
+.creator-link {
+  color: white;
+  display: block;
+  align-self: center;
+  text-align: center;
+  margin-top: 200px;
+  font-size: 20px;
+}
+
+.creator-link:hover {
+  cursor: pointer;
+}
