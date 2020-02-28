@@ -2,7 +2,7 @@ import React from 'react';
 
 const HistoryItem = (props) => {
   return(
-    <div>
+    <div className="history-item-container">
       hello
     </div>
   )
