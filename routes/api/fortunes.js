@@ -5,6 +5,7 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 
 const Fortune = require("../../models/Fortune");
+const Calculation = require("../../models/Calculations");
 const validateFortuneInput = require("../../validation/fortunes");
 
 router.get("/", (req, res) => {
@@ -16,20 +17,44 @@ router.get("/", (req, res) => {
     );
 });
 
-
 router.get("/randompos", (req, res) => {
-  Fortune
-    .aggregate([
-      { $match: { favorability: "positive" }},
-      { $sample: { size: 1 } 
-    }])
-    .then( fortune => res.json(fortune));
+  Fortune.aggregate([
+    { $match: { favorability: "positive" } },
+    { $sample: { size: 1 } }
+  ]).then(fortune => res.json(fortune));
 });
 
 router.get("/user/:user_id", (req, res) => {
-  Fortune.find({user: req.params.user_id})
-    .then(fortunes => res.json(fortunes))
-    .catch(err => res.status(404).json({ nomatchhistoryfound: 'No Fortune history found from this user'}));
+  Fortune.find().lean()
+    .then(fortunes => {
+      Calculation.find({ user_1: req.params.user_id })
+        .then(calculations => {
+          const fortunesObj = {};
+          const calculationFortunes = calculations.map(
+            calculation => {
+              return calculation.fortune_id.toJSON();
+            }
+          );
+          fortunes.forEach(fortune => {
+            fortunesObj[fortune._id.toJSON()] = {_id: fortune._id.toJSON(),
+              favorability: fortune.favorability,
+              sentence: fortune.sentence,
+              date: fortune.date
+            };
+          });
+
+          let returnArr = [];
+          calculationFortunes.forEach(fortuneId => {
+            if (fortunesObj[fortuneId]){
+              returnArr.push(fortunesObj[fortuneId]);
+            }
+          });
+      
+          return res.json(returnArr);
+        })
+        .catch(err => res.json(err));
+    })
+    .catch(err => res.json(err));
 });
 
 router.get("/:id", (req, res) => {
