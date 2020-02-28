@@ -6,7 +6,16 @@ import NavBarContainer from '../nav/nav_container';
 class ResultPage extends React.Component {
   constructor(props){
     super(props);
-  
+
+    this.state ={
+      user_1: {
+        zodiac: "Aquarius"
+      },
+      user_2:{
+        zodiac: "Aquarius"
+
+      }
+    };
   }
 
 
@@ -15,6 +24,10 @@ class ResultPage extends React.Component {
     const { percentage } = this.props.calculation;
     const { sentence } = this.props.fortune;
     const { user_1, user_2 } = this.props.users;
+
+    if (user_2 === undefined || user_1 === undefined){
+      this.props.history.push('/');
+    }
     
     return (
       <>
