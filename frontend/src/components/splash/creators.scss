@@ -9,7 +9,7 @@
     .info {
         display: flex;
         flex-wrap: wrap;
-
+        margin: 60px;
         .pair-div {
             margin: auto;
 
@@ -40,6 +40,7 @@
                     text-align: center;
                     margin: unset;
                     color: white;
+                    font-size: 17px;
                 }
 
                 .icons {
@@ -61,9 +62,9 @@
             a {
                 img {
                     margin: auto;
-                    width: 200px;
-                    height: 150px;
-                    margin-bottom: 10px;
+                    width: 250px;
+                    // height: 150px;
+                    margin-bottom: 50px;
                 }&:hover{
                     cursor: pointer;
                 }

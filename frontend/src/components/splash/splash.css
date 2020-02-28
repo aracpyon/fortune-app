@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
 
+.main-splash-container{
+  display: flex;
+  flex-direction: column;
+}
+
 .fortune-cookie-img {
   margin: auto;
   display: block;
@@ -10,7 +15,7 @@
     
 }
 
-h1{
+.splash-title{
   font-family: 'Pacifico';
   color: white;
   font-weight: 50;
@@ -87,9 +92,18 @@ body {
   text-align: center;
   margin-top: 40px;
   font-size: 20px;
-  padding-bottom: 30px;
+  padding: 20px 30px;
+  background-color: black;
+  width: fit-content;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all .4s ease;
+  color: orchid;
 }
 
 .creator-link:hover {
   cursor: pointer;
+  background-color: purple;
 }

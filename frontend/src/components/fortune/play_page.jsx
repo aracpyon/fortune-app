@@ -64,7 +64,7 @@ class PlayPage extends React.Component {
       if (allUsersArr.length > 0) {
         let usersEls = allUsersArr.map(user => {
           return (
-            <li onClick={() => this.updateUser2(user._id)}>{user.username}</li>
+            <li className="list" onClick={() => this.updateUser2(user._id)}>{user.username}</li>
           );
         });
         dropDownNames = <ul className="auto-options">{usersEls}</ul>;
@@ -99,10 +99,6 @@ class PlayPage extends React.Component {
               onChange={this.changeComplete()}
             />
             {dropDownNames}
-          </div>
-          <p className="or">Or</p>
-          <div className="newUser-input" onClick={this.handleClick}>
-            <p className="text">New User</p>
           </div>
         </div>
       );
