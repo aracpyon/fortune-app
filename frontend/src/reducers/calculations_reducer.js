@@ -18,8 +18,8 @@ const CalculationsReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CALCULATIONS:
-      debugger
-      return action.calculations;
+  
+      return action.calculations.data;
     case RECEIVE_TWO_RANDOM_USERS:
       let twoUsers = {};
       action.twoRandomUsers.data.forEach(user => {

@@ -6,7 +6,6 @@ export const getCalculations = () => {
 };
 
 export const getUserCalculations = userId => {
-  debugger
   return axios.get(`api/calculations/user/${userId}`);
 }
 
