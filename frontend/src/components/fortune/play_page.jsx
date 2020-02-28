@@ -6,7 +6,9 @@ import NavBarContainer from '../nav/nav_container';
 class PlayPage extends React.Component {
   constructor(props) {
     super(props);
+    // if (this.props.currentUser){
 
+    // }
     this.state = {
       allUsers: [],
       user_1: this.props.currentUser,
@@ -58,6 +60,7 @@ class PlayPage extends React.Component {
   }
 
   render() {
+
     let dropDownNames = null;
     if (this.state.allUsers) {
       let allUsersArr = Object.values(this.state.allUsers);
