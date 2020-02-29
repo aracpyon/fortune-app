@@ -18,19 +18,25 @@ this app:
 
 ## The Creators
 [Ara Cho](https://github.com/aracpyon)
-Ara was team lead having a hand in all features of the project. She designed the
+Ara was team lead having a hand in all features of this project. She designed the
 layout of the play and results page and, being the artist that she is, she created
 the logo for the fortune couple app.
 
 [Phong Ngo](https://github.com/phongngo91)
 Phong was the lead backend engineer. Phong spearheaded our search functionality.
-He tested each feature as it was completed and made this app smooth and bug free.
+He also wrote a lot of the mathematical code for calculating user compatibilty. Phong 
+tested each feature as it was completed and made this app smooth and bug free.
 
 [Melody Luo](https://github.com/luomel)
-Melody was one of the flex engineers working from end to end. She 
+Melody was one of the flex engineers working from end to end. She filled in wherever 
+needed contributing to the backend calculations and taking lead on the functionality and
+asthetic of the history and splash pages.
 
 [Ja'Lisha Higgs](https://github.com/higgsj82)
-Ja'Lisha was another flex engineer who 
+Ja'Lisha was another flex engineer who primarily worked on user authentication.
+She built the user models and routes on the backend and designed the login and signup 
+pages on the frontend. Ja'Lisha also styled the creators page which highlights
+our team.
 
 
 ### Helper method to find a zodiac string based on the date string
