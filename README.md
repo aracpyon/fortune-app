@@ -14,6 +14,7 @@ this app:
 <img src="frontend/public/codesnippet2.png" width="400">
 <img src="frontend/public/codesnippet3.png" width="400">
 
+## Fortunes
 
 
 ## The Creators
