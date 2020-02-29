@@ -1,7 +1,7 @@
 # Fortune Couple App
 <img src="frontend/public/fortune_couple.PNG" width="200"/>
 
-The fortune couple app, inspired by fortune cookies, is a compatibilty app that generates a fortune base on two users zodiacs, common interests, and their perspective on marriage and having children. Similar to actual fortune cookies, the fortunes this app generates are short prophecies that should not be taken too seriously. They are meant to make you think or, even better, chuckle. 
+The [fortune couple app](http://fortune-couple.herokuapp.com/#/), inspired by fortune cookies, is a compatibilty app that generates a fortune base on two users zodiacs, common interests, and their perspective on marriage/children. Similar to actual fortune cookies, the fortunes this app generates are short prophecies that should not be taken too seriously. They are meant to make you think or, even better, chuckle. 
 
 ## Code Snippets
 The code that makes the fortune couple app a success comes from the calculations
@@ -35,7 +35,7 @@ asthetic of the history and splash pages.
 [Ja'Lisha Higgs](https://github.com/higgsj82)
 Ja'Lisha was another flex engineer who primarily worked on user authentication.
 She built the user models and routes on the backend and designed the login and signup 
-pages on the frontend. Ja'Lisha also styled the creators page which highlights
+pages on the frontend. Ja'Lisha also styled the creators page that highlights
 our team.
 
 
