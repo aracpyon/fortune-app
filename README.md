@@ -1,7 +1,7 @@
 # Fortune Couple App
 <img src="frontend/public/fortune_couple.PNG" width="200"/>
 
-The fortune couple app, inspired by fortune cookies, is a compatibilty app that generates a fortune base on a two users zodiacs, common interest, and their perspective on marriage and having children. Similarly to fortune cookies, the fortunes this app generates are short prophecies that should not be taken too seriously. They are meant to make you think and, even better, chuckle. 
+The fortune couple app, inspired by fortune cookies, is a compatibilty app that generates a fortune base on two users zodiacs, common interests, and their perspective on marriage and having children. Similar to actual fortune cookies, the fortunes this app generates are short prophecies that should not be taken too seriously. They are meant to make you think or, even better, chuckle. 
 
 
 ## Code Snippets
