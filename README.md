@@ -15,7 +15,10 @@ this app:
 <img src="frontend/public/codesnippet3.png" width="400">
 
 ## Fortunes
+Here are some examples of the fortunes our app generates, as shown on a users history
+page: 
 
+<img src="frontend/public/history_page.png" width="400">
 
 ## The Creators
 [Ara Cho](https://github.com/aracpyon)
