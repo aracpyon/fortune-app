@@ -50,7 +50,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-
+ 
   User.findOne({ _id: req.params.id })
     .then(user => {
       return res.json(user);
