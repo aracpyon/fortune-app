@@ -4,7 +4,7 @@ const Validator = require("validator");
 module.exports = function validateFortuneInput(data) {
   let errors = {};
 
-  // debugger
+
   
   if (Validator.isEmpty(data.user_1)) {
     errors.user_1 = "user ID is required";

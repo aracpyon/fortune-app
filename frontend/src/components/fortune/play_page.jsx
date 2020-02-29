@@ -6,7 +6,9 @@ import NavBarContainer from '../nav/nav_container';
 class PlayPage extends React.Component {
   constructor(props) {
     super(props);
+    // if (this.props.currentUser){
 
+    // }
     this.state = {
       allUsers: [],
       user_1: this.props.currentUser,
@@ -58,13 +60,14 @@ class PlayPage extends React.Component {
   }
 
   render() {
+
     let dropDownNames = null;
     if (this.state.allUsers) {
       let allUsersArr = Object.values(this.state.allUsers);
       if (allUsersArr.length > 0) {
         let usersEls = allUsersArr.map(user => {
           return (
-            <li onClick={() => this.updateUser2(user._id)}>{user.username}</li>
+            <li className="list" onClick={() => this.updateUser2(user._id)}>{user.username}</li>
           );
         });
         dropDownNames = <ul className="auto-options">{usersEls}</ul>;
@@ -99,10 +102,6 @@ class PlayPage extends React.Component {
               onChange={this.changeComplete()}
             />
             {dropDownNames}
-          </div>
-          <p className="or">Or</p>
-          <div className="newUser-input" onClick={this.handleClick}>
-            <p className="text">New User</p>
           </div>
         </div>
       );

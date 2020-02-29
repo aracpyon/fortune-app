@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
 
+.main-splash-container{
+  display: flex;
+  flex-direction: column;
+}
+
 .fortune-cookie-img {
   margin: auto;
   display: block;
@@ -10,7 +15,7 @@
     
 }
 
-h1{
+.splash-title{
   font-family: 'Pacifico';
   color: white;
   font-weight: 50;
@@ -22,7 +27,7 @@ h1{
 }
 
 .Signup-link{
-  /* position: relative; */
+  color: purple;
   display: block;
   align-items: center;
   text-anchor: middle;
@@ -42,6 +47,7 @@ h1{
   outline: none;
   border: none;
   margin-bottom: 20px;
+
 }
 
 .Signup-link:hover{
@@ -49,7 +55,7 @@ h1{
   background-color: orchid;
 }
 .Login-link{
-  /* position: relative; */
+  color: purple;
   display: block;
   align-items: center;
   text-anchor: middle;
@@ -86,9 +92,19 @@ body {
   text-align: center;
   margin-top: 40px;
   font-size: 20px;
-  padding-bottom: 30px;
+  padding: 20px 30px;
+  background-color: black;
+  width: fit-content;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all .4s ease;
+  color: orchid;
+  margin-top: 20px;
 }
 
 .creator-link:hover {
   cursor: pointer;
+  background-color: purple;
 }

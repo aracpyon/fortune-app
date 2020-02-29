@@ -1,45 +1,74 @@
-.first-record{
-    display: flex;
-    justify-content: center;
-}
-h1{
+
+
+.history-title{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Pacifico';
     margin-bottom: 0;
-    padding: 0;
+    padding-top: 30px;
+    display: block;
+    text-indent: 130px;
+    justify-content: center;
+    margin: 0 auto;
 }
-h3{
+
+.lovematchcontainer{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    
+}
+div.calcperc{
+    font-weight:bold;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: italic;
+    
+}
+.calcperc:after{
+    content: "%";
+    font-size: x-large;
+}
+.fortune_sent{
+    padding-bottom: 10px;
+    font-size: xx-large;
+    font-family: Pacifico;
+    font-weight: 100;
+}
+.love_matches{
     border: 1px solid plum;
-    padding: 20px;
+    height: 100%;
     background-color: plum;
     font-family: Pacifico;
     color: purple;
     font-size: 20px;
-    font-weight: 100;
-   
-    border-radius: 30px;
-
-}
-ul{
-    list-style: none;
-
-    margin: auto;
-}
-li{
-    list-style: none;
+    display: absolute;
+    width: 40%;
+    padding: 10px;
+    justify-content: space-evenly;
+    text-transform: capitalize;
     text-align: center;
-    margin: auto;
-   
-    border: 2px solid plum;
-    border-radius: 20px;
-    width: 50%;
-    line-height: 50px;
-    background: white;
+    display: flex;
+    font-weight: 100;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: x-large;
+
 }
-li:last-child{
-    font-weight: 700;
+.fortuneInfo{
+    border: 1px solid plum;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 60px;
+    width: 100%;
+
 }
 .logout-button{
     justify-content: end;
-    display: inline;
     border: 1px solid plum;
     cursor: pointer;
     height: 40px;
@@ -62,4 +91,37 @@ li:last-child{
 
 .history-item-container{
     color: white;
+    justify-content: space-evenly;
 }
+
+
+.play-button{
+    float: right;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    border-radius: 8px;
+    text-align-last: center;
+    text-decoration: none;
+    font-family: 'Pacifico';
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 18px;
+    color: purple;
+    background-color: plum;
+    transition: all .4s ease;
+
+    &:hover{
+      cursor: pointer;
+      background-color: orchid;
+      border: none;
+    }
+  }
+
+
+
+.history-item-container{
+    color: white;
+}
+

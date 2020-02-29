@@ -31,7 +31,7 @@ class HistoryPage extends React.Component {
                 getFortune = fortune;
               }
             });
-            return <HistoryItem calculation={calculation} fortune={getFortune} />;
+            return <HistoryItem calculation={calculation} fortune={getFortune} users={users}/>;
           });
     }
     
@@ -43,31 +43,13 @@ class HistoryPage extends React.Component {
         <Link className="play-button" to="/play">
           Play
         </Link>
-        <h1>History for {currentUser.username}</h1>
+        <h1 className="history-title">History for {currentUser.username}</h1>
         {historyItem}
-        {
-          // calculations.map(calculation => {
-          //   let getFortune;
-          //   fortunes.map(fortune => {
-          //     if (fortune._id === calculation.fortune_id) {
-          //       getFortune = fortune;
-          //     }
-          //   });
-          //   return <HistoryItem calculation={calculation} fortune={getFortune} />;
-          // })
-        }
-
-        {/* <div className="first-record">
-                
-                <h3>{this.props.history["user_2"]["username"]}</h3>
-                </div>
-                <li>Fortune Id: {this.props.calculation["fortune_id"]}</li>
-                <li>Percentage: {this.props.calculation["percentage"]}</li>
-                <li>Favorability: {this.props.fortunes["favorability"]}</li>
-                <li>{this.props.fortunes["sentence"]}</li> */}
+  
       </div>
     );
   }
+
 }
 
 export default HistoryPage;

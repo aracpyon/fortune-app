@@ -3,7 +3,6 @@ import LoginForm from './login_form';
 import { login, clearErrors } from '../../actions/session_actions';
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
         errors: state.errors.session,
         demoUser: {
