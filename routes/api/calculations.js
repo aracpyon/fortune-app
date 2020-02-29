@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
   let total_per = Math.abs(user_1.kids - user_2.kids);
   total_per += Math.abs(user_1.marriage - user_2.marriage);
   total_per += Math.abs(user_1.personality - user_2.personality);
-  const final_score = (total_per / 4) * 100;
+  const final_score = 100 - ((total_per / 4) * 100);
 
   // Averages both compatibility
   const final_percentage = (percentCompatZodiac + final_score) / 2;
