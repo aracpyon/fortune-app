@@ -13,13 +13,13 @@ import Creators from './splash/creators';
 const App = () => (
   <div className="main-app-container">
     <Switch>
-      <AuthRoute exact path="/" component={SplashPage} />
       <AuthRoute path="/login" component={LoginFormContainer}/>
       <AuthRoute path="/signup" component={RegistrationFormContainer}/>
       <ProtectedRoute path="/history" component={HistoryPageContainer} />
       <ProtectedRoute path="/play" component={PlayContainer} />
       <ProtectedRoute path="/result" component={ResultContainer} />
       <Route path="/creators" component={Creators} />
+      <AuthRoute path="/" component={SplashPage} />
     </Switch>
   </div>
 );
