@@ -18,7 +18,8 @@
     justify-content: center;
     justify-items: center;
     margin: 0 auto;
-    
+    border: 1px solid plum;
+    width: 800px;
 }
 div.calcperc{
     font-weight:bold;
@@ -60,7 +61,6 @@ div.calcperc{
 
 }
 .fortuneInfo{
-    border: 1px solid plum;
     text-align: center;
     margin-top: 20px;
     margin-right: 60px;
